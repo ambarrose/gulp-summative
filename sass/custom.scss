@@ -1,0 +1,99 @@
+// Custom sass ..
+/* All custom css */
+
+/* nav section */
+#menu {
+  position: absolute;
+  z-index: 99;
+  background: black;
+  height: 80px;
+  width: 100%;
+}
+.home {
+  display:inline-flex;
+  float: left;
+  height: 50px;
+  width: 50px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.logo {
+  display: inline-flex;
+  float: left;
+  height: 78px;
+  width: 170px;
+  margin-left: 500px;
+}
+.accom {
+  color: white;
+  float: left;
+  display: inline-flex;
+  margin-top: 30px;
+  margin-left: 150px;
+}
+.search {
+  display: inline-flex;
+  float: right;
+  background-color: grey;
+  height: 40px;
+  width: 200px;
+  margin-right: 500px;
+  margin-top: 20px;
+}
+.fa-home {
+  font-size: 40px;
+  color: white;
+}
+.fa-search {
+  font-size: 30px;
+  color: white;
+  margin-left: 210px;
+  margin-top: 5px;
+}
+/* nav section ends */
+
+/* Buttons */
+button {
+  position: fixed;
+  top: 10px;
+  z-index: 99999;
+  font-size: 20px;
+}
+#start {
+  height:40px;
+  width:200px;
+  top: 700px;
+  left: 900px;
+}
+#next {
+  height:40px;
+  width:200px;
+  top: 600px;
+  left: 900px;
+}
+#back {
+  height:55px;
+  width:55px;
+  top: 200px;
+  left: 300px;
+}
+.fa-undo {
+  font-size: 50px;
+  color: black;
+}
+/* buttons ends */
+
+.section {
+  font-size:80px;
+}
+h1 {
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  margin-left: 300px;
+  margin-top: 350px;
+}
+h2 {
+    font-size: 20px;
+}
