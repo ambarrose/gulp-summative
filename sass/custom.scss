@@ -15,21 +15,21 @@
   height: 50px;
   width: 50px;
   margin-top: 20px;
-  margin-left: 50px;
+  margin-left: 350px;
 }
 .logo {
   display: inline-flex;
   float: left;
   height: 78px;
   width: 170px;
-  margin-left: 500px;
+  margin-left: 30px;
 }
 .accom {
   color: white;
   float: left;
   display: inline-flex;
   margin-top: 30px;
-  margin-left: 150px;
+  margin-left: 200px;
 }
 .search {
   display: inline-flex;
@@ -52,48 +52,62 @@
 }
 /* nav section ends */
 
-/* Buttons */
-button {
-  position: fixed;
-  top: 10px;
-  z-index: 99999;
-  font-size: 20px;
+
+.s1 {
+  background: url(../img/leon-9mrz3RtfeFY-unsplash.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+.s2 {
+  background-color: grey;
+}
+.s3 {
+  background-color: grey;
+}
+.s4 {
+  background-color: grey;
+}
+.slide1 {
+  position: absolute;
+  border: 2px solid black;
+  height: 200px;
+  width: 600px;
+  margin-left: 600px;
+}
+.slide2 {
+  position: absolute;
+  background-color: white;
+  opacity: 0.5;
+  height: 300px;
+  width: 600px;
+  margin-left: 600px;
+  top: 300px;
+}
+.group {
+  margin-left: 40px;
+  margin-top: 40px;
+  text-align: center;
+  width: 500px;
+}
+
+
 #start {
-  height:40px;
-  width:200px;
-  top: 700px;
-  left: 900px;
+  float: right;
+  background-color: white;
+  border: 2px solid black;
+  width: 150px;
+  height: 40px;
+  margin-right: 100px;
+  padding-top: 5px;
+  text-align: center;
 }
-#next {
-  height:40px;
-  width:200px;
-  top: 600px;
-  left: 900px;
-}
-#back {
-  height:55px;
-  width:55px;
-  top: 200px;
-  left: 300px;
-}
-.fa-undo {
-  font-size: 50px;
-  color: black;
-}
+
 /* buttons ends */
 
-.section {
-  font-size:80px;
-}
 h1 {
-  position: absolute;
-  font-size: 50px;
-  color: white;
+  font-size: 30px;
+  color: blue;
   text-align: center;
-  margin-left: 300px;
-  margin-top: 350px;
-}
-h2 {
-    font-size: 20px;
-}
+ }

@@ -13,34 +13,64 @@
   <link rel="stylesheet" href="css/custom.min.css">
 </head>
 
+<!-- psuedo code
+1. fix slider arrows
+2. add divs on slides to add content
+3. remove scrolling sections -->
 <body>
     <div id="menu">
-      <div class="logo"> <img src="img/tourismNZ-Logo.png" alt=""></div>
       <div class="home"><i class="fa fa-home" aria-hidden="true"></i></div>
+      <div class="logo"> <img src="img/tourismNZ-Logo.png" alt=""></div>
       <div class="accom"> <h2>Accomodation</h2> </div>
       <div class="search"><i class="fa fa-search" aria-hidden="true"></i></div>
-</div>
-    </div>
+  </div>
+
   <div id="fullpage">
 <!-- make a slider section class or ID separat from general section to move buttons -->
   	<div class="section" id="slideSection">
-      <div class="slide">
-        <h1>Slide 1- logo, site description - Scroll to begin your booking</h1>
-        <img src="img/leon-9mrz3RtfeFY-unsplash.jpg" alt="">
-        <button id="start">Start your booking</button>
-      </div>
-      <div class="slide"> <h1>Slide 2 - img description</h1>
-        <img src="img/jaddy-liu-4hvKfZFRpkc-unsplash.jpg" alt="">
-      </div>
-      <div class="slide"> <h1>Slide 3 - img description</h1>
-        <img src="img/karl-anderson-uqqdQ2XbQlk-unsplash.jpg" alt="">
-       </div>
-      <div class="slide"> <h1>Slide 4 - img description </h1>
-        <img src="img/roell-de-ram-2DM7eOR5iyc-unsplash.jpg" alt="">
-       </div>
-    </div>
 
-    	<div class="section" id="locationSection"> <h1>select location</h1>
+      <div class="slide s1" data-anchor="slide1">
+        <div class="slide1">
+        <h1>Slide 1 - logo, site description - Scroll to begin your booking</h1>
+        </div>
+        <div id="start">Start your booking</div>
+      </div>
+
+      <div class="slide s2" data-anchor="slide2">
+        <div class="slide2 order-Form">
+            <div class="group sel">
+              <label for="location"><h1>Select Location</h1></label>
+          		<select id="locationSelect" class="form-control">
+          		  <option>location1<img src="" alt=""> </option>
+          		  <option>location2<img src="" alt=""> </option>
+          		</select>
+            </div>
+            <div class="group sel">
+              <label for="accomodation"><h1>Select Accomodation type</h1></label>
+          		<select id="accomodationSelect" class="form-control">
+          		  <option>accom1<img src="" alt=""> </option>
+          		  <option>accom2<img src="" alt=""> </option>
+          		</select>
+            </div>
+        </div>
+      </div>
+
+      <div class="slide s3" data-anchor="slide3">
+        <div class="slide3">
+          <h1>Slide 3 - Guest selection</h1>
+        </div>
+       </div>
+
+      <div class="slide s4" data-anchor="slide4">
+        <div class="slide4">
+          <h1>Slide 4 - accom type select </h1>
+        </div>
+       </div>
+
+    </div>
+    <!-- Section ENDS -->
+
+    	<!-- <div class="section" id="locationSection"> <h1>select location</h1>
         <img src="img/mike-swigunski-KgylFXpskSA-unsplash.jpg" alt="">
       </div>
     	<div class="section" id="accomSection"> <h1>select accom type</h1>
@@ -60,21 +90,20 @@
       </div>
       <div class="section" id="completeSection"> <h1>confirmation</h1>
         <img src="img/02-stargazing-nz-night-skies-over-red-tarns--aoraki-credit-lee-cook.jpeg" alt="">
-      </div>
-
+      </div> -->
 
   </div>
 
-  <button id="next">NEXT</button>
-  <button id="back"><i class="fa fa-undo" aria-hidden="true"></i></button>
+  <!-- <button id="next">NEXT</button>
+  <button id="back"><i class="fa fa-undo" aria-hidden="true"></i></button> -->
   <!-- add font awesome go back icon  -->
-
-
 
 
   <script src="js/jquery.js"></script>
   <script src="src/jquery.fullpage.js"></script>
   <script src="js/custom.js"></script>
+
+
 
 </body>
 </html>
