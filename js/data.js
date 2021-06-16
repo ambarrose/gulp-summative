@@ -1,5 +1,10 @@
 // data for accomodation to be added into DOM
 var data = {
+  location:{
+    place:['Rotorua', 'Tauranga', 'Northland', 'Taupo', 'Wairarapa', 'Wanaka', 'Queenstown', 'Nelson', 'Christchurch'],
+    accom:['hotel', 'hostel', 'motel', 'house']
+  },
+
   hotel:{
     pricePerNight: 157,
     guestMin: 1,
@@ -28,3 +33,9 @@ var data = {
     meal2: 'Antipasto Cheeseboard sharing platter $30'
   }
 }
+
+
+// if (guestinput > data.hotel.guestMin) {
+//
+// }
+// data.hotel.guestMin

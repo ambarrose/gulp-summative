@@ -6,22 +6,40 @@ $(document).ready(function() {
     //Navigation
     menu: '#menu',
     lockAnchors: true,
-    anchors:['section1', 'slide1', 'slide2', 'slide3'],
+    anchors:['section', 's1', 's2', 's3'],
     controlArrows: true,
     slidesNavigation: true,
     slidesNavPosition: 'bottom'
   });
   // fullpage ENDS
 
-  // Click Events Fullpage.js provides an API
-  $('#btnOne').click(function (){
-    // To move down one slide...
-    $.fn.fullpage.moveSectionDown();
-  });
+  // $('.btn').click(function(){
+  //     // // Calling the function
+  //     // updateDetails();
+  // });
+  // click Event ENDS
+  //
+  // function updateDetails () {
 
-  $('#btnTwo').click(function (){
-    // To move up one slide
-    $.fn.fullpage.moveSectionUp();
+  // slide2 data logic starts
+  // var getLocation = document.getElementById('locationSelect').value;
+  // // add images
+  // // var getPlace  = document.querySelectorAll.img;
+  // var getLocationDetails = document.getElementById('locationDetails');
+  // // Changes the text of the list element -- updates the details section
+  // getlocationDetails.textContent = getLocation;
+  // console.log(getLocation);
+
+
+
+  // slide3 Date picker starts
+  $(function() {
+    $('input[name="daterange"]').daterangepicker({
+      opens: 'left'
+    },
+    function(start, end, label) {
+      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
   });
 
 });

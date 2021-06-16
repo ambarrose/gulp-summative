@@ -1,6 +1,77 @@
 // Custom sass ..
 /* All custom css */
 
+// text styles
+h1 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+ }
+h3 {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  margin-left: 80px;
+  padding-top: 5px;
+  margin-top: 10px;
+}
+
+// order-Form styles
+.group {
+  margin-left: 40px;
+  margin-top: 40px;
+  text-align: center;
+  width: 500px;
+}
+
+// bootstrap card styles
+.card {
+  position: absolute;
+  height:400px;
+  background-color: lightgrey;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+.card2 {
+  position: absolute;
+  height:400px;
+  background-color: lightgrey;
+  margin-left: 440px;
+  margin-top: 20px;
+}
+
+// button styles
+.btn {
+  position: relative;
+  width: 100px;
+  margin-left: 850px;
+  margin-top: 400px;
+  background-color: white;
+}
+.btn:hover {
+  background-color: #e91b72;
+}
+#submit-card {
+  position: absolute;
+  width: 100px;
+  margin-left: 80px;
+  margin-top: 320px;
+  background-color: white;
+}
+#submit-card:hover {
+  background-color: #e91b72;
+}
+#submit-card2 {
+  position: absolute;
+  width: 100px;
+  margin-left: 80px;
+  margin-top: 100px;
+  background-color: white;
+}
+#submit-card2:hover {
+  background-color: #e91b72;
+}
+
 /* nav section */
 #menu {
   position: absolute;
@@ -40,6 +111,8 @@
   margin-right: 500px;
   margin-top: 20px;
 }
+
+// font awesome icons
 .fa-home {
   font-size: 40px;
   color: white;
@@ -52,62 +125,130 @@
 }
 /* nav section ends */
 
-
-.s1 {
-  background: url(../img/leon-9mrz3RtfeFY-unsplash.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+// background img css
+#s1,
+#s2,
+#s3,
+#s4 {
   background-size: cover;
 }
-.s2 {
-  background-color: grey;
-}
-.s3 {
-  background-color: grey;
-}
-.s4 {
-  background-color: grey;
+
+// section 1 home slide starts
+#s1 {
+  background-image: url(../img/leon-9mrz3RtfeFY-unsplash.jpg);
 }
 .slide1 {
   position: absolute;
-  border: 2px solid black;
+  padding-top: 30px;
+  background-color: grey;
   height: 200px;
   width: 600px;
   margin-left: 600px;
 }
+#start {
+  float: right;
+  color: white;
+  font-size: 25px;
+  margin-right: 70px;
+  padding-top: 5px;
+}
+
+// section 2 location/accom starts
+#s2 {
+  background-image: url(../img/mike-swigunski-KgylFXpskSA-unsplash.jpg);
+}
 .slide2 {
   position: absolute;
-  background-color: white;
-  opacity: 0.5;
+  background-color: grey;
   height: 300px;
   width: 600px;
   margin-left: 600px;
   top: 300px;
 }
-.group {
-  margin-left: 40px;
-  margin-top: 40px;
+
+// section 3 date picker starts
+#s3 {
+  background-image: url(../img/photoholgic-6EXdJNbjxV0-unsplash.jpg);
+}
+.slide3 {
+  position: absolute;
+  background-color: grey;
+  height: 450px;
+  width: 600px;
+  margin-left: 600px;
+  padding-top: 30px;
+}
+#date {
+  position: absolute;
+  margin-left: 350px;
+  margin-top: 10px;
+  width: 200px;
   text-align: center;
+}
+
+// section 4 starts
+#s4 {
+  background-image: url(../img/casey-horner-KH-m9uYEzzg-unsplash.jpg);
+}
+.slide4 {
+  position: absolute;
+  background-color: grey;
+  height: 300px;
+  width: 600px;
+  margin-left: 600px;
+  top: 300px;
+}
+
+// section 5 starts
+#s5 {
+  background-image: url(../img/casey-horner-O_wC7v1Jh8A-unsplash.jpg);
+}
+.slide5 {
+  position: relative;
+  background-color: grey;
+  height: 550px;
+  width: 800px;
+  margin-left: 600px;
+}
+
+// section 6 starts
+#s6 {
+  background-image: url(../img/sunset.jpeg);
+}
+.slide6 {
+  position: relative;
+  background-color: grey;
+  height: 550px;
+  width: 800px;
+  margin-left: 600px;
+  padding-top: 30px;
+  margin-top: 50px;
+}
+
+// section 7 starts
+#s7 {
+  background-image: url(../img/That-Wanaka-Tree-Sunset-NZ-1440x960.jpeg);
+}
+.slide7 {
+  position: relative;
+  background-color: grey;
+  height: 500px;
   width: 500px;
+  margin-left: 700px;
+  padding-top: 40px;
+  margin-top: 50px;
 }
 
-
-#start {
-  float: right;
-  background-color: white;
-  border: 2px solid black;
-  width: 150px;
-  height: 40px;
-  margin-right: 100px;
-  padding-top: 5px;
-  text-align: center;
+// section 8 starts
+#s8{
+  background-image: url(../img/02-stargazing-nz-night-skies-over-red-tarns--aoraki-credit-lee-cook.jpeg);
 }
-
-/* buttons ends */
-
-h1 {
-  font-size: 30px;
-  color: blue;
-  text-align: center;
- }
+.slide8 {
+  position: relative;
+  background-color: grey;
+  height: 300px;
+  width: 500px;
+  margin-left: 700px;
+  padding-top: 40px;
+  margin-top: 50px;
+}
