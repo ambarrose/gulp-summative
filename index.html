@@ -23,8 +23,11 @@
     <div id="menu">
       <div class="home"><i class="fa fa-home" aria-hidden="true"></i></div>
       <div class="logo"> <img src="img/tourismNZ-Logo.png" alt=""></div>
-      <div class="accom"> <h2>Accomodation</h2> </div>
-      <div class="search"><i class="fa fa-search" aria-hidden="true"></i></div>
+      <div class="menu-item1"> <h2> Destinations </h2> </div>
+      <div class="menu-item2"> <h2> Accomodation</h2> </div>
+      <div class="menu-item3"> <h2> About</h2> </div>
+      <div class="login"><h4> Sign up</h4> </div>
+      <div class="logout"><h4> Login</h4> </div>
   </div>
   <!-- menu section ends -->
 
@@ -32,61 +35,65 @@
 <!-- make a slider section class or ID separat from general section to move buttons -->
   	<div class="section" id="slideSection">
 
-      <div class="slide" id="s1" data-anchor="slide1">
-        <div class="slide1">
+      <div class="slide" id="scrn1" data-anchor="slide1">
+        <div class="slide-1">
         <h1>Slide 1 - logo, site description</h1>
         </div>
-        <div id="start">Start your booking</div>
+        <button type="submit" id="start" class="btn btn-default">Start booking</button>
       </div>
     <!-- slide 1 ends -->
 
-      <div class="slide" id="s2" data-anchor="slide2">
-        <div class="slide2 order-Form">
+      <div class="slide" id="scrn2" data-anchor="slide2">
+        <div class="slide-2 order-Form">
             <div class="group sel">
-              <label for="location"><h1>Select Location</h1></label>
+              <label for="location"><h1>Location</h1></label>
           		<select id="locationSelect" class="form-control">
-          		  <option>location1<img src="" alt=""> </option>
-          		  <option>location2<img src="" alt=""> </option>
+                <option>Select location<img src="" alt=""> </option>
+          		  <option>Rotorua<img src="" alt=""> </option>
+          		  <option>Taupo<img src="" alt=""> </option>
+                <option>Wanaka<img src="" alt=""> </option>
+                <option>Queenstown<img src="" alt=""> </option>
+                <option>Nelson<img src="" alt=""> </option>
           		</select>
             </div>
             <div class="group sel">
-              <label for="accomodation"><h1>Select Accomodation type</h1></label>
+              <label for="accomodation"><h1>Accomodation type</h1></label>
           		<select id="accomodationSelect" class="form-control">
-          		  <option>accom1<img src="" alt=""> </option>
-          		  <option>accom2<img src="" alt=""> </option>
+                <option>Select accomodation type<img src="" alt=""> </option>
+          		  <option>Hotel<img src="" alt=""> </option>
+          		  <option>Hostel<img src="" alt=""> </option>
+                <option>Motel<img src="" alt=""> </option>
+                <option>House<img src="" alt=""> </option>
           		</select>
             </div>
         </div>
-        <button type="submit" id="submit" class="btn btn-default">Submit</button>
+        <button type="submit" id="submitLocAccom" class="btn btn-default">Submit</button>
       </div>
-
     <!-- slide 2 ends -->
 
-      <div class="slide" id="s3"  data-anchor="slide3">
-        <div class="slide3">
+      <div class="slide" id="scrn3"  data-anchor="slide3">
+        <div class="slide-3">
           <h1>Slide 3 - date selection</h1>
           <h3>Reserve accomodation dates</h3>
-          <input id="date" type="text" name="daterange" value="07/01/2021 - 07/15/2021" />
+          <input id="date" type="text" name="daterange" value="01/01/2021 - 01/15/2021" />
         </div>
-      <button type="submit" id="submit" class="btn btn-default">Submit</button>
+      <button type="submit" id="submitDate" class="btn btn-default">Submit</button>
        </div>
     <!-- slide 3 ends -->
 
-      <div class="slide" id="s4"  data-anchor="slide4">
-        <div class="slide4 order-form">
-          <div class="group sel">
-            <label for="guest"><h1>Select amount of guests</h1></label>
-            <select id="guestSelect" class="form-control">
-              <option>""<img src="" alt=""> </option>
-            </select>
+      <div class="slide" id="scrn4"  data-anchor="slide4">
+        <div class="slide-4 order-form">
+          <h1>Select amount of guests</h1>
+          <i class="fa fa-plus" id="plus" aria-hidden="true"></i>
+          <button id="guest1" type="button" name="button"> <h2>Number of guests <span id="guestTotal"></span></h2> </button>
+          <i class="fa fa-minus" id="minus" aria-hidden="true"></i>
           </div>
+          <button type="submit" id="submitGuest" class="btn btn-default">Submit</button>
         </div>
-      <button type="submit" id="submit" class="btn btn-default">Submit</button>
-       </div>
     <!-- slide 4 ends    -->
 
-      <div class="slide" id="s5"  data-anchor="slide5">
-        <div class="slide5">
+      <div class="slide" id="scrn5"  data-anchor="slide5">
+        <div class="slide-5">
           <h1>Slide 5 - accom options</h1>
 
           <div class="card" style="width: 18rem;">
@@ -96,7 +103,7 @@
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" class="primary">Read more</a>
             </div>
-            <button type="submit" id="submit-card" class="default">Submit</button>
+            <button type="submit" id="submitCard" class="btn btn-default">Submit</button>
           </div>
 
           <div class="card2" style="width: 18rem;">
@@ -106,14 +113,14 @@
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" class="primary">Read more</a>
             </div>
-            <button type="submit" id="submit-card2" class="default">Submit</button>
+            <button type="submit" id="submitCard2" class="btn btn-default">Submit</button>
           </div>
 
         </div>
        </div>
 
-       <div class="slide" id="s6"  data-anchor="slide6">
-         <div class="slide6">
+       <div class="slide" id="scrn6"  data-anchor="slide6">
+         <div class="slide-6">
            <h1>Slide 6 - food options </h1>
            <div class="card" style="width: 18rem;">
              <img src="..." class="card-img-top" alt="...">
@@ -122,7 +129,7 @@
                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                <a href="#" class="primary">Read more</a>
              </div>
-             <button type="submit" id="submit-card" class="default">Submit</button>
+             <button type="submit" id="submitFoodCard" class="btn btn-default">Submit</button>
            </div>
            <div class="card2" style="width: 18rem;">
              <img src="..." class="card-img-top" alt="...">
@@ -131,13 +138,13 @@
                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                <a href="#" class="primary">Read more</a>
              </div>
-             <button type="submit" id="submit-card2" class="default">Submit</button>
+             <button type="submit" id="submitFoodCard2" class="btn btn-default">Submit</button>
            </div>
          </div>
         </div>
 
-        <div class="slide" id="s7"  data-anchor="slide7">
-          <div class="slide7 confirmation-panel">
+        <div class="slide" id="scrn7"  data-anchor="slide7">
+          <div class="slide-7 confirmation-panel">
             <h1>Slide 7 - confirm details </h1>
             <h3 id="emailDetails"></h3>
            <ul>
@@ -165,8 +172,8 @@
           <button type="confirm" id="confirm" class="btn btn-default">Confirm</button>
           </div>
 
-         <div class="slide" id="s8"  data-anchor="slide8">
-           <div class="slide8">
+         <div class="slide" id="scrn8"  data-anchor="slide8">
+           <div class="slide-8">
              <h1>Slide 8 - final confirmation </h1>
          	</div>
            </div>

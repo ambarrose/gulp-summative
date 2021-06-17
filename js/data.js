@@ -1,7 +1,7 @@
 // data for accomodation to be added into DOM
 var data = {
   location:{
-    place:['Rotorua', 'Tauranga', 'Northland', 'Taupo', 'Wairarapa', 'Wanaka', 'Queenstown', 'Nelson', 'Christchurch'],
+    place:['Rotorua', 'Taupo', 'Wanaka', 'Queenstown', 'Nelson'],
     accom:['hotel', 'hostel', 'motel', 'house']
   },
 
