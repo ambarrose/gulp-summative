@@ -12,8 +12,13 @@ $(document).ready(function() {
     slidesNavPosition: 'bottom'
   });
   // fullpage ENDS
+
+  // individual buttons Goes to next slide (right)
+  $('#back').click(function() {
+    $.fn.fullpage.moveSlideRLeft();
+    updateDetails();
+  });
   $('#start').click(function() {
-    // Goes to next slide (right)
     $.fn.fullpage.moveSlideRight();
     updateDetails();
   });
@@ -57,7 +62,6 @@ $(document).ready(function() {
     $.fn.fullpage.moveSlideRight();
     updateDetails();
   });
-
   // // click Event ENDS
 
   // slide3 Date picker starts
@@ -90,17 +94,44 @@ $(document).ready(function() {
   var getDateDetails = document.getElementById('dateDetails');
   getDateDetails.textContent = getDate;
 
-  // slide4 code starts
-
-  };
-
-
+  var getAmount = document.getElementById('amount').value;
+  var getGuestDetails = document.getElementById('guestDetails');
+  getGuestDetails.textContent = getAmount;
 
 
+};
+// updateDetails ENDS
 
+// scrn4 starts
+  (function($) {
+    $.fn.spinner = function() {
+    this.each(function() {
+    var el = $(this);
 
+    // add elements
+    el.wrap('<span class="spinner"></span>');
+    el.before('<span class="sub">-</span>');
+    el.after('<span class="add">+</span>');
+
+    // substract
+    el.parent().on('click', '.sub', function () {
+    if (el.val() > parseInt(el.attr('min')))
+    el.val( function(i, oldval) { return --oldval; });
+    });
+
+    // increment
+    el.parent().on('click', '.add', function () {
+    if (el.val() < parseInt(el.attr('max')))
+    el.val( function(i, oldval) { return ++oldval; });
+    });
+      });
+    };
+    })(jQuery);
+    console.log();
+
+    $('input[type=number]').spinner();
+
+  // scrn4 ENDS
 
 });
 // document ready ENDS
-
-// if(peopleFromDom < data.hotel.guestMin)
