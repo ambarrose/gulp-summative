@@ -13,10 +13,9 @@ $(document).ready(function() {
   });
   // fullpage ENDS
 
-  // individual buttons Goes to next slide (right)
-  $('#back').click(function() {
-    $.fn.fullpage.moveSlideRLeft();
-    updateDetails();
+  // individual buttons Goes to next or previous slide (left or right)
+  $('.back').click(function() {
+    $.fn.fullpage.moveSlideLeft();
   });
   $('#start').click(function() {
     $.fn.fullpage.moveSlideRight();
@@ -37,32 +36,57 @@ $(document).ready(function() {
     $.fn.fullpage.moveSlideRight();
     updateDetails();
   });
-  $('#submitCard').click(function() {
+
+  $('#confirmCard2').click(function() {
     // Goes to next slide (right)
     $.fn.fullpage.moveSlideRight();
     updateDetails();
   });
-  $('#submitCard2').click(function() {
-    // Goes to next slide (right)
-    $.fn.fullpage.moveSlideRight();
-    updateDetails();
+
+  // hiding and showing accom option card elements
+  $('#expandHotelCard').click(function(){
+    $('.card').hide();
+    $('#back5').hide();
+    $('.expand').show();
+    $('#hotelExpand').show();
+    $('#cardHotelExpand').show();
+    $('#backExpand').show();
   });
-  $('#submitFoodCard').click(function() {
-    // Goes to next slide (right)
-    $.fn.fullpage.moveSlideRight();
-    updateDetails();
+
+  $('#backExpand').click(function(){
+    $('.card').show();
+    $('#back5').show();
+    $('.expand').hide();
+    $('#hotelExpand').hide();
+    $('#cardHotelExpand').hide();
+    $('#backExpand').hide();
   });
-  $('#submitFoodCard2').click(function() {
-    // Goes to next slide (right)
-    $.fn.fullpage.moveSlideRight();
-    updateDetails();
-  });
-  $('#confirm').click(function() {
-    // Goes to next slide (right)
-    $.fn.fullpage.moveSlideRight();
-    updateDetails();
-  });
+
+
+  // $('#submitFoodCard').click(function() {
+  //   // Goes to next slide (right)
+  //   $.fn.fullpage.moveSlideRight();
+  //   updateDetails();
+  // });
+  // $('#submitFoodCard2').click(function() {
+  //   // Goes to next slide (right)
+  //   $.fn.fullpage.moveSlideRight();
+  //   updateDetails();
+  // });
+  // $('#confirm').click(function() {
+  //   // Goes to next slide (right)
+  //   $.fn.fullpage.moveSlideRight();
+  //   updateDetails();
+  // });
   // // click Event ENDS
+
+  // slide2 location/accom picker Restaurants
+
+  if (getAccomodationSelect === 'hotel') {
+    var hotelPrice = data.hotel.price
+  }
+
+
 
   // slide3 Date picker starts
   $(function() {
@@ -97,9 +121,10 @@ $(document).ready(function() {
   var getAmount = document.getElementById('amount').value;
   var getGuestDetails = document.getElementById('guestDetails');
   getGuestDetails.textContent = getAmount;
+  // console.log(getAmount);
 
+}
 
-};
 // updateDetails ENDS
 
 // scrn4 starts
@@ -132,6 +157,14 @@ $(document).ready(function() {
     $('input[type=number]').spinner();
 
   // scrn4 ENDS
+
+  // scrn5 starts
+
+
+
+
+
+  // scrn5 ENDS
 
 });
 // document ready ENDS

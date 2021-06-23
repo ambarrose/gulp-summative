@@ -1,36 +1,77 @@
 // Custom sass ..
 /* All custom css */
 
+// sass color control
+$coral: #f17843;
+$lightBlue: #85e0f4;
+$fadeblack: rgba(0, 0, 0, 0.7);
+$btnBlack: #000000;
+$white: #f2f2f2;
+
 // text styles
+// main front page heading
 h1 {
-  font-size: 30px;
-  color: white;
+  font-family: 'Anton', sans-serif;
+  font-size: 60px;
+  color: $coral;
   text-align: center;
+  text-transform: uppercase;
  }
+ // menu text styles
  h2 {
    font-size: 20px;
  }
-h3 {
+ h3 {
   position: absolute;
   font-size: 20px;
-  color: white;
+  color: $white;
   margin-left: 50px;
   padding-top: 5px;
   margin-top: 10px;
  }
-h4 {
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  padding-top: 5px;
+ // slide heading styles
+ h4 {
+   font-family: 'Anton', sans-serif;
+   font-size: 30px;
+   color: $coral;
+   text-align: center;
+   text-transform: uppercase;
+ }
+ h5 {
+   font-family: 'Anton', sans-serif;
+   font-size: 30px;
+   color: $lightBlue;
+   text-align: center;
+   text-transform: uppercase;
+ }
+ li {
+   color: $white;
+ }
+ ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+ }
+ .card-text {
+   font-size: 14px;
+ }
+ .price {
+   margin-top: 10px;
+   color: $white;
  }
 
+
 // button styles
-#back:hover {
-    background-color: grey;
+#start:hover,
+#back1:hover,
+#back2:hover,
+#back3:hover,
+#back4:hover,
+#back5:hover,
+#back6:hover,
+#back7:hover {
+    background-color: $coral;
+    color: $fadeblack;
 }
 
-#start:hover,
 #submitLocAccom:hover,
 #submitDate:hover,
 #submitGuest:hover,
@@ -40,17 +81,19 @@ h4 {
 #submitFoodCard2:hover,
 #confirm:hover
 {
-  background-color: lightskyblue;
+  background-color: $fadeblack;
+  color: $coral;
 }
 
 /* nav section */
 #menu {
   position: absolute;
   z-index: 99;
-  background: black;
+  background: $btnBlack;
   height: 80px;
   width: 100%;
 }
+
 .home {
   display:inline-flex;
   float: left;
@@ -59,6 +102,7 @@ h4 {
   margin-top: 20px;
   margin-left: 350px;
 }
+
 .logo {
   display: inline-flex;
   float: left;
@@ -66,47 +110,53 @@ h4 {
   width: 170px;
   margin-left: 30px;
 }
+
 .menu-item1 {
   display: inline-flex;
-  color: white;
+  color: $white;
   margin-left: 40px;
   margin-top: 30px;
 }
+
 .menu-item2 {
   display: inline-flex;
   margin-left: 40px;
-  color: lightskyblue;
+  color: $lightBlue;
 }
+
 .menu-item3 {
   display: inline-flex;
-  color: white;
+  color: $white;
   margin-left: 40px;
 }
+
 .login {
   float: right;
-  border: 2px solid lightskyblue;
+  border: 2px solid $white;
   height:40px;
   width: 150px;
   margin-top: 20px;
   margin-right: 500px;
 }
+
 .logout {
   float: right;
-  background-color:lightskyblue;
-  border: 2px solid white;
+  border: 2px solid $white;
   height:40px;
   width: 150px;
   margin-top: 20px;
   margin-right: 20px;
 }
+
 // font awesome icons
 .fa-home {
   font-size: 40px;
-  color: white;
+  color: $white;
 }
+
 .fa-search {
   font-size: 30px;
-  color: white;
+  color: $white;
   margin-left: 210px;
   margin-top: 5px;
 }
@@ -124,34 +174,41 @@ h4 {
 #scrn1 {
   background-image: url(../img/leon-9mrz3RtfeFY-unsplash.jpg);
 }
+
 .slide-1 {
-  position: absolute;
+  position: relative;
+  border-radius: 15px;
+  background-color: $fadeblack;
+  z-index: 99;
+  height: 260px;
+  width: 900px;
+  margin-left: 500px;
   padding-top: 30px;
-  background-color: grey;
-  height: 100px;
-  width: 600px;
-  margin-left: 600px;
 }
+
 #start {
   position: absolute;
+  background-color: $white;
   width: 150px;
-  margin-left: 840px;
-  margin-top: 120px;
-  background-color: white;
+  margin-left: 360px;
+  margin-top: 20px;
 }
 
 // section 2 location/accom starts
 #scrn2 {
   background-image: url(../img/mike-swigunski-KgylFXpskSA-unsplash.jpg);
 }
+
 .slide-2 {
   position: absolute;
-  background-color: grey;
+  border-radius: 15px;
+  background-color: $fadeblack;
   height: 240px;
   width: 600px;
   margin-left: 600px;
   top: 300px;
 }
+
 // order-Form styles
 .group {
   margin-left: 40px;
@@ -159,33 +216,40 @@ h4 {
   text-align: center;
   width: 500px;
 }
+
 #back2 {
   position: absolute;
   width: 100px;
   margin-left: 600px;
   margin-top: 120px;
-  background-color: white;
+  background-color: $fadeblack;
+  color: $coral;
 }
+
 #submitLocAccom {
   position: absolute;
   width: 100px;
   margin-left: 1100px;
   margin-top: 120px;
-  background-color: white;
+  background-color:  $coral;
+  color: black;
 }
 
 // section 3 date picker starts
 #scrn3 {
   background-image: url(../img/photoholgic-6EXdJNbjxV0-unsplash.jpg);
 }
+
 .slide-3 {
   position: relative;
-  background-color: grey;
-  height: 150px;
+  border-radius: 15px;
+  background-color: $fadeblack;
+  height: 130px;
   width: 600px;
   margin-left: 600px;
-  padding-top: 30px;
+  padding-top: 20px;
 }
+
 #date {
   position: absolute;
   margin-left: 330px;
@@ -193,47 +257,56 @@ h4 {
   width: 200px;
   text-align: center;
 }
+
 #back3 {
   position: absolute;
   width: 100px;
   margin-left: 600px;
   margin-top: 20px;
-  background-color: white;
+  background-color: $fadeblack;
+  color: $coral;
 }
+
 #submitDate {
   position: absolute;
   width: 100px;
   margin-left: 1100px;
   margin-top: 20px;
-  background-color: white;
+  background-color: $coral;
 }
 
 // section 4 starts
 #scrn4 {
   background-image: url(../img/casey-horner-KH-m9uYEzzg-unsplash.jpg);
 }
+
 .slide-4 {
   position: absolute;
-  background-color: grey;
-  height: 260px;
+  border-radius: 15px;
+  background-color: $fadeblack;
+  height: 200px;
   width: 600px;
   margin-left: 600px;
-  padding-top: 30px;
-  top: 250px;
+  padding-top: 20px;
+  top: 320px;
 }
+
 #back4 {
   position: absolute;
   width: 100px;
-  margin-top: 200px;
-  background-color: white;
+  margin-top: 150px;
+  background-color: $fadeblack;
+  color: $coral;
 }
+
 #submitGuest {
   position: absolute;
   width: 100px;
   margin-left: 500px;
-  margin-top: 200px;
-  background-color: white;
+  margin-top: 150px;
+  background-color: $coral;
 }
+
 // counter styles starts
     input[type=number] {
     float: left;
@@ -243,8 +316,8 @@ h4 {
     font-size: 50px;
     text-transform: uppercase;
     text-align: center;
-    color: white;
-    border: 5px #e91b72 solid;
+    color: $white;
+    border: 5px $coral solid;
     background: none;
     outline: none;
     pointer-events: none;
@@ -253,7 +326,7 @@ h4 {
     position: absolute;
     height: 100px;
     margin-left: 150px;
-    margin-top: 40px;
+    margin-top: 20px;
     user-select: none;
     -ms-user-select: none;
     -moz-user-select: none;
@@ -272,8 +345,8 @@ h4 {
     font-weight: 700;
     font-size: 40px;
     line-height: 33px;
-    color: white;
-    border: 5px #e91b72 solid;
+    color: $white;
+    border: 5px $coral solid;
     border-right: 0;
     border-radius: 2px 0 0 2px;
     cursor: pointer;
@@ -285,7 +358,7 @@ h4 {
     }
     span.spinner > .add {
     top: 0;
-    border: 5px #e91b72 solid;
+    border: 5px $coral solid;
     border-left: 0;
     border-radius: 0 2px 2px 0;
     }
@@ -302,120 +375,241 @@ h4 {
 #scrn5 {
   background-image: url(../img/casey-horner-O_wC7v1Jh8A-unsplash.jpg);
 }
+
 .slide-5 {
+
   position: relative;
-  background-color: grey;
-  height: 500px;
-  width: 800px;
-  margin-left: 600px;
+  border-radius: 15px;
+  background-color: $fadeblack;
+  height: 550px;
+  width: 400px;
+  margin-left: 750px;
+  padding-top: 20px;
 }
+
 // bootstrap card styles
-.card {
-  position: absolute;
-  height:400px;
-  background-color: lightgrey;
-  margin-left: 60px;
-  margin-top: 20px;
+.card-body{
+
+  padding-top: 10px;
+  padding-left: 0px;
+  width: 300px;
+  color: $white;
 }
-.card2 {
+#hotel {
+
   position: absolute;
-  height:400px;
-  background-color: lightgrey;
-  margin-left: 440px;
-  margin-top: 20px;
+  height:200px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 50px;
 }
-#submitCard {
+#hostel {
+  display: none;
   position: absolute;
+  height:190px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 50px;
+}
+#motel {
+  display: none;
+  position: absolute;
+  height:200px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 50px;
+}
+#house{
+  display: none;
+  position: absolute;
+  height:200px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 50px;
+}
+// expanded div starts
+.expand {
+  display: none;
+  position: relative;
+  border-radius: 15px;
+  background-color: $fadeblack;
+  height: 490px;
+  width: 1000px;
+  margin-left: 450px;
+  padding-top: 20px;
+ }
+#hotelExpand {
+  display: none;
+  position: absolute;
+  height:260px;
+  background-color: $white;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+#cardHotelExpand{
+  display: none;
+  float: right;
+  margin-right:30px;
+  margin-top: 10px;
+  width: 530px;
+  color: $white;
+}
+#hostelExpand {
+  display: none;
+  position: absolute;
+  height:260px;
+  background-color: $white;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+#cardHostelExpand{
+  display: none;
+  float: right;
+  margin-right:30px;
+  margin-top: 10px;
+  width: 530px;
+  color: $white;
+}
+#motelExpand {
+  display: none;
+  position: absolute;
+  height:260px;
+  background-color: $white;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+#cardMotelExpand{
+  display: none;
+  float: right;
+  margin-right:30px;
+  margin-top: 10px;
+  width: 530px;
+  color: $white;
+}
+#houseExpand {
+  display: none;
+  position: absolute;
+  height:260px;
+  background-color: $white;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+#cardHouseExpand{
+  display: none;
+  float: right;
+  margin-right:30px;
+  margin-top: 10px;
+  width: 530px;
+  color: $white;
+}
+
+#expandHotelCard {
+  width: 120px;
+  background-color: $coral;
+}
+
+#confirmCard2 {
   width: 100px;
-  margin-left: 80px;
-  margin-top: 320px;
-  background-color: white;
+  margin-left: 300px;
+  background-color: $coral;
 }
-#submitCard2 {
-  position: absolute;
-  width: 100px;
-  margin-left: 80px;
-  margin-top: 120px;
-  background-color: white;
-}
+
 #back5 {
-  position: absolute;
   width: 100px;
-  margin-top: 470px;
-  background-color: white;
+  margin-left: 750px;
+  margin-top: 10px;
+  background-color: $fadeblack;
+  color: $coral;
+}
+#backExpand {
+  display: none;
+  width: 100px;
+  margin-left: 450px;
+  margin-top: 10px;
+  background-color: $fadeblack;
+  color: $coral;
 }
 
 // section 6 starts
 #scrn6 {
   background-image: url(../img/sunset.jpeg);
 }
+
 .slide-6 {
   position: relative;
-  background-color: grey;
+  border-radius: 15px;
+  background-color: $fadeblack;
   height: 500px;
   width: 800px;
   margin-left: 600px;
-  padding-top: 10px;
+  padding-top: 20px;
   margin-top: 50px;
 }
+
 #submitFoodCard {
   position: absolute;
   width: 100px;
   margin-left: 80px;
   margin-top: 320px;
-  background-color: white;
+  background-color: $coral;
 }
+
 #submitFoodCard2 {
   position: absolute;
   width: 100px;
   margin-left: 80px;
   margin-top: 120px;
-  background-color: white;
+  background-color: $coral;
 }
+
 #back6 {
   position: absolute;
   width: 100px;
-  margin-top: 460px;
-  background-color: white;
+  margin-top: 450px;
+  background-color: $fadeblack;
+  color: $coral;
 }
 
 // section 7 starts
 #scrn7 {
   background-image: url(../img/That-Wanaka-Tree-Sunset-NZ-1440x960.jpeg);
 }
+
 .slide-7 {
   position: relative;
-  background-color: grey;
+  border-radius: 15px;
+  background-color: $fadeblack;
   height: 300px;
   width: 500px;
   margin-left: 700px;
   padding-top: 20px;
 }
+
 #confirm {
   position: absolute;
   width: 100px;
   margin-left: 1100px;
-  margin-top: 20px;
-  background-color: white;
+  margin-top: 10px;
+  background-color: $coral;
 }
+
 #back7 {
   position: absolute;
   width: 100px;
   margin-left: 700px;
-  margin-top: 20px;
-  background-color: white;
+  margin-top: 10px;
+  background-color: $fadeblack;
+  color: $coral;
 }
 
 // section 8 starts
 #scrn8{
   background-image: url(../img/02-stargazing-nz-night-skies-over-red-tarns--aoraki-credit-lee-cook.jpeg);
 }
+
 .slide-8 {
   position: relative;
-  background-color: grey;
-  height: 300px;
-  width: 500px;
-  margin-left: 700px;
-  padding-top: 40px;
-  margin-top: 50px;
+  height: 80px;
+  width: 800px;
+  margin-left: 560px;
 }

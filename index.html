@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/jquery.fullpage.css">
   <link rel="stylesheet" href="js/bootstrap.min.js">
   <link rel="stylesheet" href="js/data.js">
@@ -26,8 +27,8 @@
       <div class="menu-item1"> <h2> Destinations </h2> </div>
       <div class="menu-item2"> <h2> Accomodation</h2> </div>
       <div class="menu-item3"> <h2> About</h2> </div>
-      <div class="login"><h4> Sign up</h4> </div>
-      <div class="logout"><h4> Login</h4> </div>
+      <div class="login"><h5>Sign up</h5> </div>
+      <div class="logout"><h4>Login</h4> </div>
   </div>
   <!-- menu section ends -->
 
@@ -37,93 +38,149 @@
 
       <div class="slide" id="scrn1" data-anchor="slide1">
         <div class="slide-1">
-        <h1>Slide 1 - logo, site description</h1>
+          <h1>Find accommodation to suit every level of comfort and budget</h1>
+          <button type="submit" id="start" class="btn btn-default">Start booking</button>
         </div>
-        <button type="submit" id="start" class="btn btn-default">Start booking</button>
+
       </div>
     <!-- slide 1 ends -->
 
       <div class="slide" id="scrn2" data-anchor="slide2">
         <div class="slide-2 order-Form">
             <div class="group sel">
-              <label for="location"><h1>Location</h1></label>
+              <label for="location"><h4>Location</h4></label>
           		<select id="locationSelect" class="form-control">
-                <option>Select location<img src="" alt=""> </option>
-          		  <option>Rotorua<img src="" alt=""> </option>
-          		  <option>Taupo<img src="" alt=""> </option>
-                <option>Wanaka<img src="" alt=""> </option>
-                <option>Queenstown<img src="" alt=""> </option>
-                <option>Nelson<img src="" alt=""> </option>
+                <option>Select location </option>
+          		  <option>Rotorua </option>
+          		  <option>Taupo </option>
+                <option>Wanaka </option>
+                <option>Queenstown </option>
+                <option>Nelson </option>
           		</select>
             </div>
             <div class="group sel">
-              <label for="accomodation"><h1>Accomodation type</h1></label>
+              <label for="accomodation"><h4>Accomodation type</h4></label>
           		<select id="accomodationSelect" class="form-control">
-                <option>Select accomodation type<img src="" alt=""> </option>
-          		  <option>Hotel<img src="" alt=""> </option>
-          		  <option>Hostel<img src="" alt=""> </option>
-                <option>Motel<img src="" alt=""> </option>
-                <option>House<img src="" alt=""> </option>
+                <option>Select accomodation type</option>
+          		  <option>Hotel</option>
+          		  <option>Hostel</option>
+                <option>Motel</option>
+                <option>House</option>
           		</select>
             </div>
         </div>
-        <button type="submit" id="back2" class="btn btn-default">Go Back</button>
+        <button type="submit" id="back2" class="back btn btn-default">Go Back</button>
         <button type="submit" id="submitLocAccom" class="btn btn-default">Next</button>
       </div>
     <!-- slide 2 ends -->
 
       <div class="slide" id="scrn3"  data-anchor="slide3">
         <div class="slide-3">
-          <h1>Slide 3 - date selection</h1>
+          <h4>Date selection</h4>
           <h3>Reserve accomodation dates</h3>
           <input id="date" type="text" name="daterange" value="01/01/2021 - 01/15/2021" />
         </div>
-      <button type="submit" id="back3" class="btn btn-default">Go Back</button>
+      <button type="submit" id="back3" class="back btn btn-default">Go Back</button>
       <button type="submit" id="submitDate" class="btn btn-default">Next</button>
        </div>
     <!-- slide 3 ends -->
 
       <div class="slide" id="scrn4"  data-anchor="slide4">
         <div class="slide-4">
-        <h1>Select amount of guests</h1>
+        <h4>Select amount of guests</h4>
         <input id="amount" type="number" min="1" max="100" value="1" />
-          <button type="submit" id="back4" class="btn btn-default">Go Back</button>
+          <button type="submit" id="back4" class="back btn btn-default">Go Back</button>
           <button type="submit" id="submitGuest" class="btn btn-default">Next</button>
           </div>
         </div>
     <!-- slide 4 ends -->
 
       <div class="slide" id="scrn5"  data-anchor="slide5">
-        <div class="slide-5">
-          <h1>Slide 5 - accom options</h1>
-
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+        <div class="slide-5 card">
+          <h4>Accommodation options</h4>
+          <div id="hotel" style="width: 18rem;">
+            <img src="img/q-u-i-giL2fHNr3Lc-unsplash.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h2 class="card-title">Option 1</h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="primary">Read more</a>
+              <h2 class="card-title">Hotel</h2>
+              <p class="card-text">A haven for adventurous travelers since 1884, the world-renowned Hermitage Hotel is nestled among stunning scenery within the Aoraki Mount Cook National Park, offering a complete alpine holiday experience for all.</p>
+              <button id="expandHotelCard"  type="button" name="button" class="btn btn-default">Read more</button>
             </div>
-            <button type="submit" id="submitCard" class="btn btn-default">Next</button>
+          </div>
+          <div id="hostel" style="width: 18rem;">
+            <img src="img/marcus-loke-WQJvWU_HZFo-unsplash.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h2 class="card-title">Hostel</h2>
+              <p class="card-text">The Hostel offers a range of backpacker accommodation and features a rooftop terrace. It is just a 1-minute walk from where you will find a variety of restaurants, cafes and bars. Free high speed unlimited WiFi is offered throughout the property.</p>
+              <button id="expandCard"  type="button" name="button" class="btn btn-default">Read more</button>
+            </div>
+          </div>
+          <div id="motel" style="width: 18rem;">
+            <img src="img/randy-laybourne-pTWwoaoB9e0-unsplash.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h2 class="card-title">Motel</h2>
+              <p class="card-text">The motel comes with a seating area, a flat-screen TV with satellite channels, a kitchenette, a dining area and a private bathroom with free toiletries and a shower. The units will provide guests with a wardrobe and a kettle.</p>
+              <button id="expandCard"  type="button" name="button" class="btn btn-default">Read more</button>
+            </div>
+          </div>
+          <div id="house" style="width: 18rem;">
+            <img src="img/chesley-mccarty-IP8_8izFE4k-unsplash.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h2 class="card-title">House</h2>
+              <p class="card-text">Completely renovated, modern beach house. Enjoy balmy summer nights on the deck watching the sun go down or cosy winter days watching the Wild West coast weather. Full cooking and laundry facilities along with two kayaks and two sun loungers. WIFI and NETFLIX included.</p>
+              <button id="expandCard"  type="button" name="button" class="btn btn-default">Read more</button>
+            </div>
+          </div>
+        </div>
+          <!-- expanded div starts -->
+          <div class="expand">
+            <h4>Accommodation options</h4>
+            <div id="hotelExpand" style="width: 25rem;">
+              <img src="img/q-u-i-giL2fHNr3Lc-unsplash.jpg" class="card-img-top" alt="...">
+              <p class="price">Pricing Per night $157</p>
+              <button id="confirmCard2"  type="button" name="button" class="btn btn-default">Confirm</button>
+            </div>
+            <div id="hostelExpand" style="width: 25rem;">
+              <img src="img/marcus-loke-WQJvWU_HZFo-unsplash.jpg" class="card-img-top" alt="...">
+              <p class="price">Pricing Per night $30</p>
+              <button id="confirmCard2"  type="button" name="button" class="btn btn-default">Confirm</button>
+            </div>
+            <div id="motelExpand" style="width: 25rem;">
+              <img src="img/randy-laybourne-pTWwoaoB9e0-unsplash.jpg" class="card-img-top" alt="...">
+              <p class="price">Pricing Per night $90</p>
+              <button id="confirmCard2"  type="button" name="button" class="btn btn-default">Confirm</button>
+            </div>
+            <div id="houseExpand" style="width: 25rem;">
+              <img src="img/chesley-mccarty-IP8_8izFE4k-unsplash.jpg" class="card-img-top" alt="...">
+              <p class="price">Pricing Per night $240</p>
+              <button id="confirmCard2"  type="button" name="button" class="btn btn-default">Confirm</button>
+            </div>
+            <div id="cardHotelExpand">
+              <h2 class="card-title">Hotel</h2>
+              <p class="card-text">A haven for adventurous travelers since 1884, the world-renowned Hermitage Hotel is nestled among stunning scenery within the Aoraki Mount Cook National Park, offering a complete alpine holiday experience for all. <br><br> About <br> Accommodation ranges from luxurious hotel rooms with unsurpassed views of Aoraki Mt Cook to standard rooms overlooking the Sefton mountain range. Several Restaurants and bars offer an assortment of dining options with spectacular views from every seat. <br><br> Experience world renowned activities, including a cruise amongst glaciers, explore the Tasman valley, stargaze within the International Dark Sky Reserve or be educated and entertained in the Sir Edmund Hillary Alpine Centre. <br><br> Facilities and Features<br>
+              Breakfast, Children Welcome, Conference Facilities, Dinner, Disabled Access, Laundry, Licensed Bar, Lift, Lunch, Restaurant.</p>
+            </div>
+            <div id="cardHostelExpand">
+              <h2 class="card-title">Hostel</h2>
+              <p class="card-text">Located in the heart of the city of Wellington,The Marion Hostel offers a range of backpacker accommodation and features a rooftop terrace. <br><br> It is just a 1-minute walk from Cuba Street where you will find a variety of restaurants, cafes and bars. Free high speed unlimited WiFi is offered throughout the property. <br><br> The property offers a choice of rooms including spacious dormitory rooms and private rooms, including one private room with an en suite. All rooms offer complimentary towels, hairdryer and toiletries. The dormitory rooms include reading lights, USB plugs, privacy curtains and lockers. Linen is provided for all rooms. <br> <br> Guests have access to shared fully equipped kitchens and dining area as well as two spacious guest lounge areas with large TV’s with Netflix. The Marion Hostel is within a 5-minute walk from Wellington's vibrant nightlife on Courtney Place and the Te Papa Museum.
+            </div>
+            <div id="cardMotelExpand">
+              <h2 class="card-title">Motel</h2>
+              <p class="card-text">Regal Residency offers accommodation with a garden and free WiFi throughout the property as well as free private parking for guests who drive.<br><br> Featuring family rooms, this property also provides guests with a sun terrace. Local points of interest like ASB Showgrounds and Auckland War Memorial Museum are reachable within 7 km and 7 km, respectively. <br><br>The motel comes with a seating area, a flat-screen TV with satellite channels, a kitchenette, a dining area and a private bathroom with free toiletries and a shower. The units will provide guests with a wardrobe and a kettle. <br><br>The area is popular for cycling, and bike hire is available at Regal Residency.
+            </div>
+            <div id="cardHouseExpand">
+              <h2 class="card-title">House</h2>
+              <p class="card-text">Our newly renovated Beach Bach studio is a stand-alone, private, clean, self-contained. Comfortable bed, wardrobe, kitchen, dining table, air conditioning, bathroom, shower, toilet. All linen provided. Features covered outdoor entertaining area, BBQ & outdoor furniture.  Close to restaurants, shops and The Lost Springs. <br><br>The studio is a private space which is separate from our house. The studio has its own access through the gate at the front of the property next to the large shed. The studio is perfect for a couple getaway.<br><br> There is also a kitchenette with tea and coffee making facilities, microwave, electric fry pan, fridge, kettle and toaster. Tea and coffee provided. <br><br> Enjoy your surroundings with a relaxing drink in the patio area, cook on the BBQ relax and enjoy the laid back kiwi way in our beach studio - don’t forget your beach towels (not provided).
+            </div>
           </div>
 
-          <div class="card2" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">Option 2</h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="primary">Read more</a>
-            </div>
-            <button type="submit" id="submitCard2" class="btn btn-default">Next</button>
-          </div>
-          <button type="submit" id="back5" class="btn btn-default">Go Back</button>
+          <button type="submit" id="back5" class="back btn btn-default">Go Back</button>
+          <button type="submit" id="backExpand" class="btn btn-default">Go Back</button>
 
         </div>
-       </div>
 
        <div class="slide" id="scrn6"  data-anchor="slide6">
          <div class="slide-6">
-           <h1>Slide 6 - food options </h1>
+           <h4>Food options </h4>
            <div class="card" style="width: 18rem;">
              <img src="..." class="card-img-top" alt="...">
              <div class="card-body">
@@ -133,24 +190,16 @@
              </div>
              <button type="submit" id="submitFoodCard" class="btn btn-default">Next</button>
            </div>
-           <div class="card2" style="width: 18rem;">
-             <img src="..." class="card-img-top" alt="...">
-             <div class="card-body">
-               <h2 class="card-title">Option 2</h2>
-               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               <a href="#" class="primary">Read more</a>
-             </div>
-             <button type="submit" id="submitFoodCard2" class="btn btn-default">Next</button>
-           </div>
-           <button type="submit" id="back6" class="btn btn-default">Go Back</button>
+
+           <button type="submit" id="back6" class="back btn btn-default">Go Back</button>
          </div>
         </div>
 
         <div class="slide" id="scrn7"  data-anchor="slide7">
           <div class="slide-7 confirmation-panel">
-            <h1>Slide 7 - confirm details </h1>
+            <h4>Confirm details </h4>
             <h3 id="emailDetails"></h3>
-           <ul>
+           <ul class="no-bullets">
              <li id="locationDetails">
              </li>
              <li id="accomTypeDetails">
@@ -172,13 +221,13 @@
            <div class="total">
            <h3>Total: $<span id="amountTotal"></span></h3></div>
          </div>
-         <button type="submit" id="back7" class="btn btn-default">Go Back</button>
+         <button type="submit" id="back7" class="back btn btn-default">Go Back</button>
           <button type="confirm" id="confirm" class="btn btn-default">Confirm</button>
           </div>
 
          <div class="slide" id="scrn8"  data-anchor="slide8">
            <div class="slide-8">
-             <h1>Thank you for placing your booking with tourismNZ! </h1>
+             <h1>Thank you for placing your booking with tourism NZ! </h1>
          	</div>
            </div>
           </div>

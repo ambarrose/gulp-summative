@@ -6,27 +6,27 @@ var data = {
   },
 
   hotel:{
-    pricePerNight: 157,
+    price: 157,
     guestMin: 1,
     guestsMax: 2,
     meal1: 'Degustation $130pp',
     meal2: 'Classic High Tea $50pp'
   },
   hostel:{
-    pricePerNight: 30,
+    price: 30,
     guest: 1,
     meal1: '2 for 1 burgers and fries $18' ,
     meal2: 'Buffet breakfast $28pp'
   },
   motel:{
-    pricePerNight: 90,
+    price: 90,
     guestMin: 1,
     guestMax: 10,
     meal1: 'Continental breakfast $20pp',
     meal2: 'Antipasto Cheeseboard platter $30'
   },
   house:{
-    pricePerNight: 240,
+    price: 240,
     guestMin: 1,
     guestMax: 15,
     meal1: 'Dessert sharing platter $40',
