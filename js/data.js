@@ -9,12 +9,16 @@ var data = {
     price: 157,
     guestMin: 1,
     guestsMax: 2,
+    nightMin: 1,
+    nightMax: 5,
     meal1: 'Degustation $130pp',
     meal2: 'Classic High Tea $50pp'
   },
   hostel:{
     price: 30,
     guest: 1,
+    nightMin: 1,
+    nightMax: 10,
     meal1: '2 for 1 burgers and fries $18' ,
     meal2: 'Buffet breakfast $28pp'
   },
@@ -22,6 +26,8 @@ var data = {
     price: 90,
     guestMin: 1,
     guestMax: 10,
+    nightMin: 3,
+    nightMax: 10,
     meal1: 'Continental breakfast $20pp',
     meal2: 'Antipasto Cheeseboard platter $30'
   },
@@ -29,6 +35,8 @@ var data = {
     price: 240,
     guestMin: 1,
     guestMax: 15,
+    nightMin: 2,
+    nightMax: 15,
     meal1: 'Dessert sharing platter $40',
     meal2: 'Antipasto Cheeseboard sharing platter $30'
   }

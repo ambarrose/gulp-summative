@@ -1,6 +1,18 @@
 // custom js ......
 
+
+
 $(document).ready(function() {
+
+
+console.log(data);
+
+var getHotelPrice = data.hotel.price;
+var getHostelPrice = data.hostel.price;
+var getMotelPrice = data.motel.price;
+var getHousePrice = data.house.price;
+
+
 
   $('#fullpage').fullpage({
     //Navigation
@@ -43,6 +55,8 @@ $(document).ready(function() {
     updateDetails();
   });
 
+
+
   // hiding and showing accom option card elements
   $('#expandHotelCard').click(function(){
     $('.card').hide();
@@ -80,14 +94,6 @@ $(document).ready(function() {
   // });
   // // click Event ENDS
 
-  // slide2 location/accom picker Restaurants
-
-  if (getAccomodationSelect === 'hotel') {
-    var hotelPrice = data.hotel.price
-  }
-
-
-
   // slide3 Date picker starts
   $(function() {
     $('input[name="daterange"]').daterangepicker({
@@ -102,32 +108,43 @@ $(document).ready(function() {
 
   // slide2 data code starts
   var getLocation = document.getElementById('locationSelect').value;
-
   var getLocationDetails = document.getElementById('locationDetails');
-
   var getAccomodation = document.getElementById('accomodationSelect').value;
   var getAccomTypeDetails = document.getElementById('accomTypeDetails');
+  var getTotalPrice = document.getElementById('amountTotal');
+  var getHotelPrice = data.hotel.price;
+
   // Changes the text of the list element -- updates the details section
   getLocationDetails.textContent = getLocation;
   getAccomTypeDetails.textContent = getAccomodation;
-  // console.log(getLocation);
-  // console.log(getAccomodation);
+
+  // slide2 location/accom picker Restaurants
+  var getAccomodationSelect = document.getElementById('accomodationSelect').value;
+
+  if (getAccomodationSelect === 'Hotel'){
+    getTotalPrice.textContent = getHotelPrice;
+  } else if (getAccomodationSelect === 'Hostel') {
+      getTotalPrice.textContent = getHostelPrice;
+  } else if (getAccomodationSelect === 'Motel') {
+      getTotalPrice.textContent = getMotelPrice;
+  } else if (getAccomodationSelect === 'House') {
+      getTotalPrice.textContent = getHousePrice;
+  }
 
   // slide3 code starts
   var getDate = document.getElementById('date').value;
   var getDateDetails = document.getElementById('dateDetails');
   getDateDetails.textContent = getDate;
 
+  // slide4 code starts
   var getAmount = document.getElementById('amount').value;
   var getGuestDetails = document.getElementById('guestDetails');
   getGuestDetails.textContent = getAmount;
-  // console.log(getAmount);
-
+  
 }
-
 // updateDetails ENDS
 
-// scrn4 starts
+// slide4 code cont
   (function($) {
     $.fn.spinner = function() {
     this.each(function() {
