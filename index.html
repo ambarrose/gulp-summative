@@ -14,11 +14,6 @@
   <link rel="stylesheet" href="css/custom.min.css">
 </head>
 
- <!-- psuedo code
-1. fix slider arrows
-2. add divs on slides to add content
-3. add date range code -->
-
 <body>
     <div id="menu">
       <div class="home"><i class="fa fa-home" aria-hidden="true"></i></div>
@@ -110,7 +105,7 @@
             <div class="card-body">
               <h2 class="card-title">Hostel</h2>
               <p class="card-text">The Hostel offers a range of backpacker accommodation and features a rooftop terrace. It is just a 1-minute walk from where you will find a variety of restaurants, cafes and bars. Free high speed unlimited WiFi is offered throughout the property.</p>
-              <button id="expandCard"  type="button" name="button" class="btn btn-default">Read more</button>
+              <button id="expandHostelCard"  type="button" name="button" class="btn btn-default">Read more</button>
             </div>
           </div>
           <div id="motel" style="width: 18rem;">
@@ -118,7 +113,7 @@
             <div class="card-body">
               <h2 class="card-title">Motel</h2>
               <p class="card-text">The motel comes with a seating area, a flat-screen TV with satellite channels, a kitchenette, a dining area and a private bathroom with free toiletries and a shower. The units will provide guests with a wardrobe and a kettle.</p>
-              <button id="expandCard"  type="button" name="button" class="btn btn-default">Read more</button>
+              <button id="expandMotelCard"  type="button" name="button" class="btn btn-default">Read more</button>
             </div>
           </div>
           <div id="house" style="width: 18rem;">
@@ -126,7 +121,7 @@
             <div class="card-body">
               <h2 class="card-title">House</h2>
               <p class="card-text">Completely renovated, modern beach house. Enjoy balmy summer nights on the deck watching the sun go down or cosy winter days watching the Wild West coast weather. Full cooking and laundry facilities along with two kayaks and two sun loungers. WIFI and NETFLIX included.</p>
-              <button id="expandCard"  type="button" name="button" class="btn btn-default">Read more</button>
+              <button id="expandHouseCard"  type="button" name="button" class="btn btn-default">Read more</button>
             </div>
           </div>
         </div>
@@ -178,20 +173,51 @@
         </div>
 
        <div class="slide" id="scrn6"  data-anchor="slide6">
-         <div class="slide-6">
-           <h4>Food options </h4>
-           <div class="card" style="width: 18rem;">
-             <img src="..." class="card-img-top" alt="...">
-             <div class="card-body">
-               <h2 class="card-title">Option 1</h2>
-               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               <a href="#" class="primary">Read more</a>
-             </div>
-             <button type="submit" id="submitFoodCard" class="btn btn-default">Next</button>
-           </div>
+         <div class="slide-6 food-card">
+           <h4>Food options</h4>
+           <div id="hotelFood" style="width: 18rem;">
+             <img src="img/Degustation-Dinner.jpg" class="card-img-top" alt="...">
+             <div class="food-card-body">
+               <h2 class="card-title">5 course Degustation</h2>
+               <p class="card-text">This dégustation involves sampling small portions of all of our chef's signature dishes. It consists of many courses and is accompanied by matching wines that complement each dish.</p>
+               <h2>Select amount of meals</h2>
 
-           <button type="submit" id="back6" class="back btn btn-default">Go Back</button>
-         </div>
+               <input class"food-spinner" id="meals" type="number" min="1" max="100" value="1" />
+
+               <button id="confirmCard1"  type="button" name="button" class="btn btn-default">Confirm</button>
+               <button id="confirmCardNo"  type="button" name="button" class="btn btn-default">No thanks</button>
+             </div>
+           </div>
+           <div id="hostelFood" style="width: 18rem;">
+             <img src="img/burgers.jpg" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h2 class="card-title">2 for 1 burgers and fries</h2>
+               <p class="card-text">Served on a brioche bun. GF buns are availablne on request. Menu will be available on arrival. </p>
+               <button id="confirmCard1"  type="button" name="button" class="btn btn-default">Confirm</button>
+               <button id="confirmCardNo"  type="button" name="button" class="btn btn-default">No thanks</button>
+             </div>
+           </div>
+           <div id="motelFood" style="width: 18rem;">
+             <img src="img/Buffet-breakfast.jpg" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h2 class="card-title">Buffet Breakfast</h2>
+               <p class="card-text">Select foods from wide choice of hot and cold dishes, including cold cuts, cheese, sweets, and fruit, is made available. You can eat as much as you like without limits. </p>
+               <button id="confirmCard1"  type="button" name="button" class="btn btn-default">Confirm</button>
+               <button id="confirmCardNo"  type="button" name="button" class="btn btn-default">No thanks</button>
+             </div>
+           </div>
+           <div id="houseFood" style="width: 18rem;">
+             <img src="img/chesley-mccarty-IP8_8izFE4k-unsplash.jpg" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h2 class="card-title">Dessert Sharing Platter</h2>
+               <p class="card-text">Nothing could be easier for dessert than this selection of store-bought sweets. Serve on a board with fresh fruit and homemade Baileys and brownie dips for extra wow factor.</p>
+               <button id="confirmCard1"  type="button" name="button" class="btn btn-default">Confirm</button>
+               <button id="confirmCardNo"  type="button" name="button" class="btn btn-default">No thanks</button>
+             </div>
+           </div>
+        </div>
+
+         <button type="submit" id="back6" class="back btn btn-default">Go Back</button>
         </div>
 
         <div class="slide" id="scrn7"  data-anchor="slide7">
@@ -212,11 +238,6 @@
              <li id="foodDetails">
              </li>
            </ul>
-           <!-- add images -->
-           <!-- <div id="imgSection">
-             <img id='holidayImg' src="" alt="">
-             <img id='hotelImg' src="" alt="">
-           </div> -->
            <div class="total">
            <h3>Total: $<span id="amountTotal"></span></h3></div>
          </div>
@@ -228,8 +249,8 @@
            <div class="slide-8">
              <h1>Thank you for placing your booking with tourism NZ! </h1>
          	</div>
-           </div>
-          </div>
+        </div>
+      </div>
 
     </div>
     <!-- Section ENDS -->

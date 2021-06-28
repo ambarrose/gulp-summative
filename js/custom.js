@@ -48,13 +48,20 @@ var getHousePrice = data.house.price;
     $.fn.fullpage.moveSlideRight();
     updateDetails();
   });
-
   $('#confirmCard2').click(function() {
     // Goes to next slide (right)
     $.fn.fullpage.moveSlideRight();
     updateDetails();
   });
-
+  $('#confirmCard1').click(function() {
+    // Goes to next slide (right)
+    $.fn.fullpage.moveSlideRight();
+    updateDetails();
+  });
+  $('#confirm').click(function() {
+    // Goes to next slide (right)
+    $.fn.fullpage.moveSlideRight();
+  });
 
 
   // hiding and showing accom option card elements
@@ -75,33 +82,23 @@ var getHousePrice = data.house.price;
     $('#cardHotelExpand').hide();
     $('#backExpand').hide();
   });
-
-
-  // $('#submitFoodCard').click(function() {
-  //   // Goes to next slide (right)
-  //   $.fn.fullpage.moveSlideRight();
-  //   updateDetails();
-  // });
-  // $('#submitFoodCard2').click(function() {
-  //   // Goes to next slide (right)
-  //   $.fn.fullpage.moveSlideRight();
-  //   updateDetails();
-  // });
-  // $('#confirm').click(function() {
-  //   // Goes to next slide (right)
-  //   $.fn.fullpage.moveSlideRight();
-  //   updateDetails();
-  // });
   // // click Event ENDS
 
   // slide3 Date picker starts
   $(function() {
-    $('input[name="daterange"]').daterangepicker({
-      opens: 'left'
+    $('#date').daterangepicker({
+        "minDate": "06/28/2021",
+        "maxDate": "07/13/2021",
+        opens: 'left'
     }, function(start, end, label) {
-      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+      console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
     });
   });
+
+  var d = new Date();
+  document.getElementById("date").innerHTML = d;
+  console.log(d);
+
   // date picker ends
 
   function updateDetails () {
@@ -113,13 +110,19 @@ var getHousePrice = data.house.price;
   var getAccomTypeDetails = document.getElementById('accomTypeDetails');
   var getTotalPrice = document.getElementById('amountTotal');
   var getHotelPrice = data.hotel.price;
+  console.log(getLocation);
+  console.log(getAccomodation);
 
   // Changes the text of the list element -- updates the details section
   getLocationDetails.textContent = getLocation;
   getAccomTypeDetails.textContent = getAccomodation;
 
   // slide2 location/accom picker Restaurants
+
+
   var getAccomodationSelect = document.getElementById('accomodationSelect').value;
+  var getHotelCard = document.getElementById('hotel').value;
+  // console.log(getHotelCard);
 
   if (getAccomodationSelect === 'Hotel'){
     getTotalPrice.textContent = getHotelPrice;
@@ -131,6 +134,10 @@ var getHousePrice = data.house.price;
       getTotalPrice.textContent = getHousePrice;
   }
 
+  // if (getAccomodationSelect === 'Hotel'){
+  //   getHotelCard;
+  // }
+
   // slide3 code starts
   var getDate = document.getElementById('date').value;
   var getDateDetails = document.getElementById('dateDetails');
@@ -140,7 +147,7 @@ var getHousePrice = data.house.price;
   var getAmount = document.getElementById('amount').value;
   var getGuestDetails = document.getElementById('guestDetails');
   getGuestDetails.textContent = getAmount;
-  
+
 }
 // updateDetails ENDS
 

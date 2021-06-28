@@ -372,13 +372,12 @@ h1 {
     -webkit-appearance: none;
     }
 
+
 // section 5 starts
 #scrn5 {
   background-image: url(../img/casey-horner-O_wC7v1Jh8A-unsplash.jpg);
 }
-
 .slide-5 {
-
   position: relative;
   border-radius: 15px;
   background-color: $fadeblack;
@@ -387,10 +386,8 @@ h1 {
   margin-left: 750px;
   padding-top: 20px;
 }
-
 // bootstrap card styles
 .card-body{
-
   padding-top: 10px;
   padding-left: 0px;
   width: 300px;
@@ -508,13 +505,23 @@ h1 {
   width: 120px;
   background-color: $coral;
 }
-
+#expandHostelCard {
+  width: 120px;
+  background-color: $coral;
+}
+#expandMotelCard {
+  width: 120px;
+  background-color: $coral;
+}
+#expandHouseCard {
+  width: 120px;
+  background-color: $coral;
+}
 #confirmCard2 {
   width: 100px;
   margin-left: 300px;
   background-color: $coral;
 }
-
 #back5 {
   width: 100px;
   margin-left: 750px;
@@ -535,40 +542,140 @@ h1 {
 #scrn6 {
   background-image: url(../img/sunset.jpeg);
 }
-
 .slide-6 {
   position: relative;
   border-radius: 15px;
   background-color: $fadeblack;
-  height: 500px;
-  width: 800px;
-  margin-left: 600px;
-  padding-top: 20px;
-  margin-top: 50px;
+  height: 600px;
+  width: 400px;
+  margin-left: 750px;
+  padding-top: 15px;
 }
-
-#submitFoodCard {
+.food-card-body{
+  padding-left: 0px;
+  width: 300px;
+  color: $white;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+#hotelFood {
   position: absolute;
-  width: 100px;
-  margin-left: 80px;
-  margin-top: 320px;
-  background-color: $coral;
+  height:160px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 10px;
 }
-
-#submitFoodCard2 {
+#hostelFood {
+  display: none;
   position: absolute;
-  width: 100px;
-  margin-left: 80px;
-  margin-top: 120px;
-  background-color: $coral;
+  height:180px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 20px;
 }
+#motelFood {
+  display: none;
+  position: absolute;
+  height:200px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 10px;
+}
+#houseFood {
+  display: none;
+  position: absolute;
+  height:200px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 10px;
+}
+// food spinner css
+.food-card {
+  input[type=number] {
+  float: left;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+  border: 3px $coral solid;
+  background: none;
+  outline: none;
+  pointer-events: none;
+  }
+  span.spinner {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 0px;
+  height: 50px;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  }
+  span.spinner > .sub,
+  span.spinner > .add {
+  float: left;
+  margin-top: 10px;
+  display: block;
+  padding-top:5px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-family: Lato;
+  font-weight: 700;
+  font-size: 30px;
+  color: $white;
+  border: 3px $coral solid;
+  border-right: 0;
+  border-radius: 2px 0 0 2px;
+  cursor: pointer;
+  transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+  -ms-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  -webkit-transition: 0.1s linear;
+  }
+  span.spinner > .add {
+  border: 3px $coral solid;
+  border-left: 0;
+  border-radius: 0 2px 2px 0;
+  }
+  span.spinner > .sub:hover,
+  span.spinner > .add:hover {
+  background: none;
+  color: #25323B;
+  }
+  input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  }
+}
+// food-card ends
 
 #back6 {
-  position: absolute;
+  margin-left: 750px;
   width: 100px;
-  margin-top: 450px;
   background-color: $fadeblack;
   color: $coral;
+  margin-top: 10px;
+}
+#confirmCard1 {
+  position: absolute;
+  display: flex;
+  margin-top: 90px;
+  margin-right: 100px;
+  padding-left:20px;
+  width: 100px;
+  background-color: $coral;
+}
+#confirmCardNo {
+  float: right;
+  margin-top: 90px;
+  width: 100px;
+  background-color: $white;
 }
 
 // section 7 starts
