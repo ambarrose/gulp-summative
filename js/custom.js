@@ -1,18 +1,11 @@
 // custom js ......
-
-
-
 $(document).ready(function() {
-
-
-console.log(data);
+// console.log(data);
 
 var getHotelPrice = data.hotel.price;
 var getHostelPrice = data.hostel.price;
 var getMotelPrice = data.motel.price;
 var getHousePrice = data.house.price;
-
-
 
   $('#fullpage').fullpage({
     //Navigation
@@ -37,6 +30,7 @@ var getHousePrice = data.house.price;
     // Goes to next slide (right)
     $.fn.fullpage.moveSlideRight();
     updateDetails();
+    datePicker();
   });
   $('#submitDate').click(function() {
     // Goes to next slide (right)
@@ -63,7 +57,6 @@ var getHousePrice = data.house.price;
     $.fn.fullpage.moveSlideRight();
   });
 
-
   // hiding and showing accom option card elements
   $('#expandHotelCard').click(function(){
     $('.card').hide();
@@ -82,24 +75,67 @@ var getHousePrice = data.house.price;
     $('#cardHotelExpand').hide();
     $('#backExpand').hide();
   });
-  // // click Event ENDS
+  // hide show click Event ENDS
 
   // slide3 Date picker starts
-  $(function() {
-    $('#date').daterangepicker({
-        "minDate": "06/28/2021",
-        "maxDate": "07/13/2021",
-        opens: 'left'
-    }, function(start, end, label) {
-      console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+  function datePicker (){
+
+    var getAccomodationSelect = document.getElementById('accomodationSelect').value;
+
+    $(function() {
+      $('#date').daterangepicker({
+          "minDate": newDate,
+          "maxDate": theDate,
+          opens: 'left'
+      }, function(start, end, label) {
+      });
     });
-  });
 
-  var d = new Date();
-  document.getElementById("date").innerHTML = d;
-  console.log(d);
+    var dateObj = new Date();
+    var month = dateObj.getUTCMonth() + 1; //months from 1-12
+    var day = dateObj.getUTCDate();
+    var year = dateObj.getUTCFullYear();
+    var theDate = new Date();
+    var newDate = month + "/" + day + "/" + year;
+    console.log(newDate);
+    var theNextDate = new Date(newDate);
 
+    console.log(getAccomodationSelect);
+
+    if (getAccomodationSelect === 'Hotel'){
+      theDate.setDate(theNextDate.getDate()+data.hotel.nightMax);
+    } else if (getAccomodationSelect === 'Hostel'){
+      theDate.setDate(theNextDate.getDate()+data.hostel.nightMax);
+    } else if (getAccomodationSelect === 'Motel'){
+      theDate.setDate(theNextDate.getDate()+data.motel.nightMax);
+    } else if (getAccomodationSelect === 'House'){
+      theDate.setDate(theNextDate.getDate()+data.house.nightMax);
+    }
+  }
   // date picker ends
+
+  // 1. Get the amount
+  // 2. console.dir the amount id max attribute
+  // 3. Change the max value with .js
+  // 4. Test this works
+  // 5. Start on conditionals
+  // 6. Do you need a function
+
+  function updateGuests (){
+
+    var getAmountGuests = document.querySelector('#amount');
+    console.dir(getAmountGuests.max);
+    var input = document.getElementById('#guest');
+    input.setAttribute('max', 10);
+  };
+
+  // var getAccomodationSelect =
+  // document.getElementById('accomodationSelect').value;
+
+  // if (getAccomodationSelect === 'Hotel'){
+  //     console.log(getAmount);
+  //   getAmount = (data.hotel.guestsMax);
+  // }
 
   function updateDetails () {
 
@@ -117,9 +153,7 @@ var getHousePrice = data.house.price;
   getLocationDetails.textContent = getLocation;
   getAccomTypeDetails.textContent = getAccomodation;
 
-  // slide2 location/accom picker Restaurants
-
-
+  // slide2 location/accom selector
   var getAccomodationSelect = document.getElementById('accomodationSelect').value;
   var getHotelCard = document.getElementById('hotel').value;
   // console.log(getHotelCard);
@@ -134,24 +168,32 @@ var getHousePrice = data.house.price;
       getTotalPrice.textContent = getHousePrice;
   }
 
-  // if (getAccomodationSelect === 'Hotel'){
-  //   getHotelCard;
-  // }
-
   // slide3 code starts
   var getDate = document.getElementById('date').value;
   var getDateDetails = document.getElementById('dateDetails');
   getDateDetails.textContent = getDate;
+  var getHotelDays = data.hotel.nightMax;
+
 
   // slide4 code starts
   var getAmount = document.getElementById('amount').value;
   var getGuestDetails = document.getElementById('guestDetails');
   getGuestDetails.textContent = getAmount;
 
+
+
+  // slide5 code starts
+
+  // slide6 code starts
+  var getFood = document.getElementById('meals').value;
+  var getFoodDetails = document.getElementById('foodDetails');
+  getFoodDetails.textContent = getFood;
+
+
 }
 // updateDetails ENDS
 
-// slide4 code cont
+// slide4 counter code
   (function($) {
     $.fn.spinner = function() {
     this.each(function() {
@@ -168,7 +210,7 @@ var getHousePrice = data.house.price;
     el.val( function(i, oldval) { return --oldval; });
     });
 
-    // increment
+    // add
     el.parent().on('click', '.add', function () {
     if (el.val() < parseInt(el.attr('max')))
     el.val( function(i, oldval) { return ++oldval; });
@@ -179,7 +221,6 @@ var getHousePrice = data.house.price;
     console.log();
 
     $('input[type=number]').spinner();
-
   // scrn4 ENDS
 
   // scrn5 starts
