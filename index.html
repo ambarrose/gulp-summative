@@ -35,6 +35,10 @@
           <h1>Find accommodation to suit every level of comfort and budget</h1>
           <button type="submit" id="start" class="btn btn-default">Start booking</button>
         </div>
+        <div id="hash">
+          <h1>#DoSomethingNewNZ</h1>
+        </div>
+
 
       </div>
     <!-- slide 1 ends -->
@@ -82,7 +86,7 @@
       <div class="slide" id="scrn4"  data-anchor="slide4">
         <div class="slide-4">
         <h4>Select amount of guests</h4>
-        <input id="amount" type="number" min="1" max id="guest" value="1" />
+        <input id="amount" type="number" min="1" max="" value="1" />
           <button type="submit" id="back4" class="back btn btn-default">Go Back</button>
           <button type="submit" id="submitGuest" class="btn btn-default">Next</button>
           </div>
@@ -223,17 +227,16 @@
         <div class="slide" id="scrn7"  data-anchor="slide7">
           <div class="slide-7 confirmation-panel">
             <h4>Confirm details </h4>
-            <h3 id="emailDetails"></h3>
            <ul class="no-bullets">
-             <li id="locationDetails">
+             <li>Location: <span id="locationDetails"></span>
              </li>
-             <li id="accomTypeDetails">
+             <li>Accomodation:  <span id="accomTypeDetails"></span>
              </li>
-             <li id="dateDetails">
+             <li>Check in and out: <span id="dateDetails"></span>
              </li>
-             <li id="guestDetails">
+             <li>Number of Guests: <span id="guestDetails"></span>
              </li>
-             <li id="foodDetails">
+             <li>Number of meals: <span id="foodDetails"></span>
              </li>
            </ul>
            <div class="total">
@@ -255,9 +258,6 @@
   </div>
   <!-- fullpage ends -->
 
-
-  <!-- <script src="js/jquery.js"></script> -->
-
   <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
   <script src="anime.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -266,9 +266,6 @@
   <script src="src/jquery.fullpage.js"></script>
   <script src="js/data.js"></script>
   <script src="js/custom.js"></script>
-
-
-
 
 </body>
 </html>

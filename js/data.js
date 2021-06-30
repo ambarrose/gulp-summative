@@ -7,7 +7,7 @@ var data = {
 
   hotel:{
     price: 157,
-    guestMin: 1,
+    guestsMin: 1,
     guestsMax: 2,
     nightMin: 1,
     nightMax: 5,
@@ -16,7 +16,7 @@ var data = {
   },
   hostel:{
     price: 30,
-    guest: 1,
+    guestsMax: 1,
     nightMin: 1,
     nightMax: 10,
     meal1: '2 for 1 burgers and fries $18' ,
@@ -24,8 +24,8 @@ var data = {
   },
   motel:{
     price: 90,
-    guestMin: 1,
-    guestMax: 10,
+    guestsMin: 1,
+    guestsMax: 10,
     nightMin: 3,
     nightMax: 10,
     meal1: 'Continental breakfast $20pp',
@@ -33,8 +33,8 @@ var data = {
   },
   house:{
     price: 240,
-    guestMin: 1,
-    guestMax: 15,
+    guestsMin: 1,
+    guestsMax: 15,
     nightMin: 2,
     nightMax: 15,
     meal1: 'Dessert sharing platter $40',

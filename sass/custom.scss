@@ -2,7 +2,7 @@
 /* All custom css */
 
 
-// sass color control
+// sass color variables
 $coral: #f17843;
 $lightBlue: #85e0f4;
 $fadeblack: rgba(0, 0, 0, 0.7);
@@ -18,47 +18,55 @@ h1 {
   text-align: center;
   text-transform: uppercase;
  }
+
  // menu text styles
- h2 {
-   font-size: 20px;
+h2 {
+  font-size: 20px;
  }
- h3 {
+
+h3 {
   position: absolute;
   font-size: 20px;
   color: $white;
   margin-left: 50px;
-  padding-top: 5px;
   margin-top: 10px;
  }
  // slide heading styles
- h4 {
-   font-family: 'Anton', sans-serif;
-   font-size: 30px;
-   color: $coral;
-   text-align: center;
-   text-transform: uppercase;
- }
- h5 {
-   font-family: 'Anton', sans-serif;
-   font-size: 30px;
-   color: $lightBlue;
-   text-align: center;
-   text-transform: uppercase;
- }
- li {
-   color: $white;
- }
- ul.no-bullets {
-  list-style-type: none; /* Remove bullets */
- }
- .card-text {
-   font-size: 14px;
- }
- .price {
-   margin-top: 10px;
-   color: $white;
+h4 {
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  color: $coral;
+  text-align: center;
+  text-transform: uppercase;
  }
 
+h5 {
+  font-family: 'Anton', sans-serif;
+  font-size: 30px;
+  color: $lightBlue;
+  text-align: center;
+  text-transform: uppercase;
+ }
+
+li {
+  color: $white;
+  margin-left: 20px;
+  margin-top: 10px;
+ }
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  margin-top: 30px;
+ }
+
+.card-text {
+  font-size: 14px;
+ }
+
+.price {
+  margin-top: 10px;
+  color: $white;
+ }
 
 // button styles
 #start:hover,
@@ -69,9 +77,9 @@ h1 {
 #back5:hover,
 #back6:hover,
 #back7:hover {
-    background-color: $coral;
-    color: $fadeblack;
-}
+  background-color: $coral;
+  color: $fadeblack;
+ }
 
 #submitLocAccom:hover,
 #submitDate:hover,
@@ -80,11 +88,12 @@ h1 {
 #submitCard2:hover,
 #submitFoodCard:hover,
 #submitFoodCard2:hover,
-#confirm:hover
-{
+#confirm:hover,
+#confirmCard1:hover,
+#confirmCardNo:hover {
   background-color: $fadeblack;
   color: $coral;
-}
+ }
 
 /* nav section */
 #menu {
@@ -93,7 +102,7 @@ h1 {
   background: $btnBlack;
   height: 80px;
   width: 100%;
-}
+ }
 
 .home {
   display:inline-flex;
@@ -101,8 +110,8 @@ h1 {
   height: 50px;
   width: 50px;
   margin-top: 20px;
-  margin-left: 350px;
-}
+  margin-left: 400px;
+ }
 
 .logo {
   display: inline-flex;
@@ -110,12 +119,12 @@ h1 {
   height: 78px;
   width: 170px;
   margin-left: 30px;
-}
+ }
 
 .menu-item1 {
   display: inline-flex;
   color: $white;
-  margin-left: 40px;
+  margin-left: 70px;
   margin-top: 30px;
 }
 
@@ -123,13 +132,13 @@ h1 {
   display: inline-flex;
   margin-left: 40px;
   color: $lightBlue;
-}
+ }
 
 .menu-item3 {
   display: inline-flex;
   color: $white;
   margin-left: 40px;
-}
+ }
 
 .login {
   float: right;
@@ -137,8 +146,8 @@ h1 {
   height:40px;
   width: 150px;
   margin-top: 20px;
-  margin-right: 500px;
-}
+  margin-right: 400px;
+ }
 
 .logout {
   float: right;
@@ -147,20 +156,20 @@ h1 {
   width: 150px;
   margin-top: 20px;
   margin-right: 20px;
-}
+ }
 
 // font awesome icons
 .fa-home {
   font-size: 40px;
   color: $white;
-}
+ }
 
 .fa-search {
   font-size: 30px;
   color: $white;
   margin-left: 210px;
   margin-top: 5px;
-}
+ }
 /* nav section ends */
 
 // background img css
@@ -169,12 +178,12 @@ h1 {
 #scrn3,
 #scrn4 {
   background-size: cover;
-}
+ }
 
 // section 1 home slide starts
 #scrn1 {
   background-image: url(../img/leon-9mrz3RtfeFY-unsplash.jpg);
-}
+ }
 
 .slide-1 {
   position: relative;
@@ -183,9 +192,9 @@ h1 {
   z-index: 99;
   height: 260px;
   width: 900px;
-  margin-left: 500px;
+  margin-left: 520px;
   padding-top: 30px;
-}
+ }
 
 #start {
   position: absolute;
@@ -193,12 +202,16 @@ h1 {
   width: 150px;
   margin-left: 360px;
   margin-top: 20px;
-}
+ }
+
+#hash {
+  margin-top: 100px;
+ }
 
 // section 2 location/accom starts
 #scrn2 {
   background-image: url(../img/mike-swigunski-KgylFXpskSA-unsplash.jpg);
-}
+ }
 
 .slide-2 {
   position: absolute;
@@ -208,7 +221,7 @@ h1 {
   width: 600px;
   margin-left: 600px;
   top: 300px;
-}
+ }
 
 // order-Form styles
 .group {
@@ -216,30 +229,30 @@ h1 {
   margin-top: 20px;
   text-align: center;
   width: 500px;
-}
+ }
 
 #back2 {
   position: absolute;
   width: 100px;
-  margin-left: 600px;
+  margin-left: 610px;
   margin-top: 120px;
   background-color: $fadeblack;
   color: $coral;
-}
+ }
 
 #submitLocAccom {
   position: absolute;
   width: 100px;
-  margin-left: 1100px;
+  margin-left: 1090px;
   margin-top: 120px;
   background-color:  $coral;
   color: black;
-}
+ }
 
 // section 3 date picker starts
 #scrn3 {
   background-image: url(../img/photoholgic-6EXdJNbjxV0-unsplash.jpg);
-}
+ }
 
 .slide-3 {
   position: relative;
@@ -249,7 +262,7 @@ h1 {
   width: 600px;
   margin-left: 600px;
   padding-top: 20px;
-}
+ }
 
 #date {
   position: absolute;
@@ -257,379 +270,100 @@ h1 {
   margin-top: 10px;
   width: 200px;
   text-align: center;
-}
+ }
 
 #back3 {
   position: absolute;
   width: 100px;
-  margin-left: 600px;
-  margin-top: 20px;
+  margin-left: 610px;
+  margin-top: 10px;
   background-color: $fadeblack;
   color: $coral;
-}
+ }
 
 #submitDate {
   position: absolute;
   width: 100px;
-  margin-left: 1100px;
-  margin-top: 20px;
+  margin-left: 1090px;
+  margin-top: 10px;
   background-color: $coral;
-}
+ }
 
 // section 4 starts
 #scrn4 {
   background-image: url(../img/casey-horner-KH-m9uYEzzg-unsplash.jpg);
-}
+ }
 
 .slide-4 {
   position: absolute;
   border-radius: 15px;
   background-color: $fadeblack;
-  height: 200px;
+  height: 220px;
   width: 600px;
-  margin-left: 600px;
+  margin-left: 650px;
   padding-top: 20px;
-  top: 320px;
-}
+  top: 300px;
+ }
 
 #back4 {
   position: absolute;
   width: 100px;
-  margin-top: 150px;
+  margin-top: 170px;
+  margin-left: 10px;
   background-color: $fadeblack;
   color: $coral;
-}
+ }
 
 #submitGuest {
   position: absolute;
   width: 100px;
-  margin-left: 500px;
-  margin-top: 150px;
+  margin-left: 490px;
+  margin-top: 170px;
   background-color: $coral;
-}
+ }
 
 // counter styles starts
-    input[type=number] {
-    float: left;
-    width: 100px;
-    height: 100px;
-    padding: 0;
-    font-size: 50px;
-    text-transform: uppercase;
-    text-align: center;
-    color: $white;
-    border: 5px $coral solid;
-    background: none;
-    outline: none;
-    pointer-events: none;
-    }
-    span.spinner {
-    position: absolute;
-    height: 100px;
-    margin-left: 150px;
-    margin-top: 20px;
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    }
-    span.spinner > .sub,
-    span.spinner > .add {
-    float: left;
-    display: block;
-    width: 100px;
-    height: 100px;
-    padding-top: 30px;
-    text-align: center;
-    font-family: Lato;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 33px;
-    color: $white;
-    border: 5px $coral solid;
-    border-right: 0;
-    border-radius: 2px 0 0 2px;
-    cursor: pointer;
-    transition: 0.1s linear;
-    -o-transition: 0.1s linear;
-    -ms-transition: 0.1s linear;
-    -moz-transition: 0.1s linear;
-    -webkit-transition: 0.1s linear;
-    }
-    span.spinner > .add {
-    top: 0;
-    border: 5px $coral solid;
-    border-left: 0;
-    border-radius: 0 2px 2px 0;
-    }
-    span.spinner > .sub:hover,
-    span.spinner > .add:hover {
-    background: none;
-    color: #25323B;
-    }
-    input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    }
-
-
-// section 5 starts
-#scrn5 {
-  background-image: url(../img/casey-horner-O_wC7v1Jh8A-unsplash.jpg);
-}
-.slide-5 {
-  position: relative;
-  border-radius: 15px;
-  background-color: $fadeblack;
-  height: 550px;
-  width: 400px;
-  margin-left: 750px;
-  padding-top: 20px;
-}
-// bootstrap card styles
-.card-body{
-  padding-top: 10px;
-  padding-left: 0px;
-  width: 300px;
-  color: $white;
-}
-#hotel {
-
-  position: absolute;
-  height:200px;
-  background-color: $white;
-  margin-left: 55px;
-  margin-top: 50px;
-}
-#hostel {
-  display: none;
-  position: absolute;
-  height:190px;
-  background-color: $white;
-  margin-left: 55px;
-  margin-top: 50px;
-}
-#motel {
-  display: none;
-  position: absolute;
-  height:200px;
-  background-color: $white;
-  margin-left: 55px;
-  margin-top: 50px;
-}
-#house{
-  display: none;
-  position: absolute;
-  height:200px;
-  background-color: $white;
-  margin-left: 55px;
-  margin-top: 50px;
-}
-// expanded div starts
-.expand {
-  display: none;
-  position: relative;
-  border-radius: 15px;
-  background-color: $fadeblack;
-  height: 490px;
-  width: 1000px;
-  margin-left: 450px;
-  padding-top: 20px;
- }
-#hotelExpand {
-  display: none;
-  position: absolute;
-  height:260px;
-  background-color: $white;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-#cardHotelExpand{
-  display: none;
-  float: right;
-  margin-right:30px;
-  margin-top: 10px;
-  width: 530px;
-  color: $white;
-}
-#hostelExpand {
-  display: none;
-  position: absolute;
-  height:260px;
-  background-color: $white;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-#cardHostelExpand{
-  display: none;
-  float: right;
-  margin-right:30px;
-  margin-top: 10px;
-  width: 530px;
-  color: $white;
-}
-#motelExpand {
-  display: none;
-  position: absolute;
-  height:260px;
-  background-color: $white;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-#cardMotelExpand{
-  display: none;
-  float: right;
-  margin-right:30px;
-  margin-top: 10px;
-  width: 530px;
-  color: $white;
-}
-#houseExpand {
-  display: none;
-  position: absolute;
-  height:260px;
-  background-color: $white;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-#cardHouseExpand{
-  display: none;
-  float: right;
-  margin-right:30px;
-  margin-top: 10px;
-  width: 530px;
-  color: $white;
-}
-
-#expandHotelCard {
-  width: 120px;
-  background-color: $coral;
-}
-#expandHostelCard {
-  width: 120px;
-  background-color: $coral;
-}
-#expandMotelCard {
-  width: 120px;
-  background-color: $coral;
-}
-#expandHouseCard {
-  width: 120px;
-  background-color: $coral;
-}
-#confirmCard2 {
-  width: 100px;
-  margin-left: 300px;
-  background-color: $coral;
-}
-#back5 {
-  width: 100px;
-  margin-left: 750px;
-  margin-top: 10px;
-  background-color: $fadeblack;
-  color: $coral;
-}
-#backExpand {
-  display: none;
-  width: 100px;
-  margin-left: 450px;
-  margin-top: 10px;
-  background-color: $fadeblack;
-  color: $coral;
-}
-
-// section 6 starts
-#scrn6 {
-  background-image: url(../img/sunset.jpeg);
-}
-.slide-6 {
-  position: relative;
-  border-radius: 15px;
-  background-color: $fadeblack;
-  height: 600px;
-  width: 400px;
-  margin-left: 750px;
-  padding-top: 15px;
-}
-.food-card-body{
-  padding-left: 0px;
-  width: 300px;
-  color: $white;
-  margin-top: 10px;
-  padding-top: 10px;
-}
-#hotelFood {
-  position: absolute;
-  height:160px;
-  background-color: $white;
-  margin-left: 55px;
-  margin-top: 10px;
-}
-#hostelFood {
-  display: none;
-  position: absolute;
-  height:180px;
-  background-color: $white;
-  margin-left: 55px;
-  margin-top: 20px;
-}
-#motelFood {
-  display: none;
-  position: absolute;
-  height:200px;
-  background-color: $white;
-  margin-left: 55px;
-  margin-top: 10px;
-}
-#houseFood {
-  display: none;
-  position: absolute;
-  height:200px;
-  background-color: $white;
-  margin-left: 55px;
-  margin-top: 10px;
-}
-// food spinner css
-.food-card {
-  input[type=number] {
+input[type=number] {
   float: left;
-  margin-top: 10px;
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  font-size: 50px;
   text-transform: uppercase;
   text-align: center;
   color: $white;
-  border: 3px $coral solid;
+  border: 5px $coral solid;
   background: none;
   outline: none;
   pointer-events: none;
-  }
-  span.spinner {
-  position: relative;
-  margin-top: 10px;
-  margin-left: 0px;
-  height: 50px;
+ }
+
+span.spinner {
+  position: absolute;
+  height: 100px;
+  margin-left: 150px;
+  margin-top: 20px;
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
-  }
-  span.spinner > .sub,
-  span.spinner > .add {
+ }
+
+span.spinner > .sub,
+span.spinner > .add {
   float: left;
-  margin-top: 10px;
   display: block;
-  padding-top:5px;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
+  padding-top: 30px;
   text-align: center;
   font-family: Lato;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 40px;
+  line-height: 33px;
   color: $white;
-  border: 3px $coral solid;
+  border: 5px $coral solid;
   border-right: 0;
   border-radius: 2px 0 0 2px;
   cursor: pointer;
@@ -638,30 +372,346 @@ h1 {
   -ms-transition: 0.1s linear;
   -moz-transition: 0.1s linear;
   -webkit-transition: 0.1s linear;
-  }
-  span.spinner > .add {
-  border: 3px $coral solid;
+ }
+
+span.spinner > .add {
+  top: 0;
+  border: 5px $coral solid;
   border-left: 0;
   border-radius: 0 2px 2px 0;
-  }
+ }
+
+span.spinner > .sub:hover,
+span.spinner > .add:hover {
+  background: none;
+  color: $coral;
+ }
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+ }
+
+// section 5 starts
+#scrn5 {
+  background-image: url(../img/casey-horner-O_wC7v1Jh8A-unsplash.jpg);
+ }
+
+.slide-5 {
+  position: relative;
+  border-radius: 15px;
+  background-color: $fadeblack;
+  height: 550px;
+  width: 400px;
+  margin-left: 750px;
+  padding-top: 20px;
+ }
+// bootstrap card styles
+.card-body{
+  padding-top: 10px;
+  padding-left: 0px;
+  width: 300px;
+  color: $white;
+ }
+
+#hotel {
+  position: absolute;
+  height:200px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 50px;
+ }
+
+#hostel {
+  display: none;
+  position: absolute;
+  height:190px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 50px;
+ }
+
+#motel {
+  display: none;
+  position: absolute;
+  height:200px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 50px;
+ }
+
+#house{
+  display: none;
+  position: absolute;
+  height:200px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 50px;
+ }
+
+// expanded div starts
+.expand {
+  display: none;
+  position: relative;
+  border-radius: 15px;
+  background-color: $fadeblack;
+  height: 490px;
+  width: 1000px;
+  margin-left: 650px;
+  padding-top: 20px;
+ }
+
+#hotelExpand {
+  display: none;
+  position: absolute;
+  height:260px;
+  background-color: $white;
+  margin-left: 20px;
+  margin-top: 10px;
+ }
+
+#cardHotelExpand{
+  display: none;
+  float: right;
+  margin-right:30px;
+  margin-top: 10px;
+  width: 530px;
+  color: $white;
+ }
+
+#hostelExpand {
+  display: none;
+  position: absolute;
+  height:260px;
+  background-color: $white;
+  margin-left: 20px;
+  margin-top: 10px;
+ }
+
+#cardHostelExpand{
+  display: none;
+  float: right;
+  margin-right:30px;
+  margin-top: 10px;
+  width: 530px;
+  color: $white;
+ }
+
+#motelExpand {
+  display: none;
+  position: absolute;
+  height:260px;
+  background-color: $white;
+  margin-left: 20px;
+  margin-top: 10px;
+ }
+
+#cardMotelExpand{
+  display: none;
+  float: right;
+  margin-right:30px;
+  margin-top: 10px;
+  width: 530px;
+  color: $white;
+ }
+
+#houseExpand {
+  display: none;
+  position: absolute;
+  height:260px;
+  background-color: $white;
+  margin-left: 20px;
+  margin-top: 10px;
+ }
+
+#cardHouseExpand{
+  display: none;
+  float: right;
+  margin-right:30px;
+  margin-top: 10px;
+  width: 530px;
+  color: $white;
+ }
+
+#expandHotelCard {
+  width: 120px;
+  background-color: $coral;
+ }
+
+#expandHostelCard {
+  width: 120px;
+  background-color: $coral;
+ }
+
+#expandMotelCard {
+  width: 120px;
+  background-color: $coral;
+ }
+
+#expandHouseCard {
+  width: 120px;
+  background-color: $coral;
+ }
+
+#confirmCard2 {
+  width: 100px;
+  margin-left: 300px;
+  background-color: $coral;
+ }
+
+#back5 {
+  width: 100px;
+  margin-left: 760px;
+  margin-top: 10px;
+  background-color: $fadeblack;
+  color: $coral;
+ }
+
+#backExpand {
+  display: none;
+  width: 100px;
+  margin-left: 660px;
+  margin-top: 10px;
+  background-color: $fadeblack;
+  color: $coral;
+ }
+
+// section 6 starts
+#scrn6 {
+  background-image: url(../img/sunset.jpeg);
+ }
+
+.slide-6 {
+  position: relative;
+  border-radius: 15px;
+  background-color: $fadeblack;
+  height: 590px;
+  width: 400px;
+  margin-left: 750px;
+  padding-top: 15px;
+ }
+
+.food-card-body{
+  padding-left: 0px;
+  width: 300px;
+  color: $white;
+  margin-top: 10px;
+  padding-top: 10px;
+ }
+
+#hotelFood {
+  position: absolute;
+  height:160px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 10px;
+ }
+
+#hostelFood {
+  display: none;
+  position: absolute;
+  height:180px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 20px;
+ }
+
+#motelFood {
+  display: none;
+  position: absolute;
+  height:200px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 10px;
+ }
+
+#houseFood {
+  display: none;
+  position: absolute;
+  height:200px;
+  background-color: $white;
+  margin-left: 55px;
+  margin-top: 10px;
+ }
+
+// food spinner css
+.food-card {
+  input[type=number] {
+    float: left;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+    border: 3px $coral solid;
+    background: none;
+    outline: none;
+    pointer-events: none;
+   }
+
+  span.spinner {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 0px;
+    height: 50px;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+   }
+
+  span.spinner > .sub,
+  span.spinner > .add {
+    float: left;
+    margin-top: 10px;
+    display: block;
+    padding-top:5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 30px;
+    color: $white;
+    border: 3px $coral solid;
+    border-right: 0;
+    border-radius: 2px 0 0 2px;
+    cursor: pointer;
+    transition: 0.1s linear;
+    -o-transition: 0.1s linear;
+    -ms-transition: 0.1s linear;
+    -moz-transition: 0.1s linear;
+    -webkit-transition: 0.1s linear;
+   }
+
+  span.spinner > .add {
+    border: 3px $coral solid;
+    border-left: 0;
+    border-radius: 0 2px 2px 0;
+   }
+
   span.spinner > .sub:hover,
   span.spinner > .add:hover {
-  background: none;
-  color: #25323B;
-  }
+    background: none;
+    color: #25323B;
+   }
+
   input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  }
-}
+    -webkit-appearance: none;
+   }
+ }
 // food-card ends
 
 #back6 {
-  margin-left: 750px;
+  margin-left: 760px;
   width: 100px;
   background-color: $fadeblack;
   color: $coral;
   margin-top: 10px;
-}
+ }
+
 #confirmCard1 {
   position: absolute;
   display: flex;
@@ -670,50 +720,53 @@ h1 {
   padding-left:20px;
   width: 100px;
   background-color: $coral;
-}
+ }
+
 #confirmCardNo {
   float: right;
   margin-top: 90px;
   width: 100px;
   background-color: $white;
-}
+  color: $coral;
+ }
 
 // section 7 starts
 #scrn7 {
   background-image: url(../img/That-Wanaka-Tree-Sunset-NZ-1440x960.jpeg);
-}
+ }
 
 .slide-7 {
   position: relative;
   border-radius: 15px;
   background-color: $fadeblack;
-  height: 300px;
-  width: 500px;
-  margin-left: 700px;
+  height: 340px;
+  width: 440px;
+  margin-left: 740px;
+  margin-top: 100px;
   padding-top: 20px;
-}
+ }
 
 #confirm {
   position: absolute;
   width: 100px;
-  margin-left: 1100px;
+  margin-left: 1080px;
   margin-top: 10px;
   background-color: $coral;
-}
+ }
 
 #back7 {
   position: absolute;
   width: 100px;
-  margin-left: 700px;
+  margin-left: 740px;
   margin-top: 10px;
   background-color: $fadeblack;
   color: $coral;
-}
+ }
 
 // section 8 starts
 #scrn8{
   background-image: url(../img/02-stargazing-nz-night-skies-over-red-tarns--aoraki-credit-lee-cook.jpeg);
-}
+ }
 
 .slide-8 {
   position: relative;
