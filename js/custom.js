@@ -45,17 +45,52 @@ var getHousePrice = data.house.price;
     $.fn.fullpage.moveSlideRight();
     updateDetails();
   });
-  $('#confirmCard2').click(function() {
-    // Goes to next slide (right)
-    $.fn.fullpage.moveSlideRight();
-    updateDetails();
-  });
   $('#confirmCard1').click(function() {
     // Goes to next slide (right)
     $.fn.fullpage.moveSlideRight();
     updateDetails();
   });
-  $('#confirm').click(function() {
+  $('#confirmCard2').click(function() {
+    // Goes to next slide (right)
+    $.fn.fullpage.moveSlideRight();
+    updateDetails();
+  });
+  $('#confirmCard3').click(function() {
+    // Goes to next slide (right)
+    $.fn.fullpage.moveSlideRight();
+    updateDetails();
+  });
+  $('#confirmCard4').click(function() {
+    // Goes to next slide (right)
+    $.fn.fullpage.moveSlideRight();
+    updateDetails();
+  });
+  $('#confirmCardA').click(function() {
+    // Goes to next slide (right)
+    $.fn.fullpage.moveSlideRight();
+    updateDetails();
+  });
+  $('#confirmCardB').click(function() {
+    // Goes to next slide (right)
+    $.fn.fullpage.moveSlideRight();
+    updateDetails();
+  });
+  $('#confirmCardC').click(function() {
+    // Goes to next slide (right)
+    $.fn.fullpage.moveSlideRight();
+    updateDetails();
+  });
+  $('#confirmCardD').click(function() {
+    // Goes to next slide (right)
+    $.fn.fullpage.moveSlideRight();
+    updateDetails();
+  });
+  $('#confirmCardNoA').click(function() {
+    // Goes to next slide (right)
+    $.fn.fullpage.moveSlideRight();
+    updateDetails();
+  });
+  $('#finalConfirm').click(function() {
     // Goes to next slide (right)
     $.fn.fullpage.moveSlideRight();
   });
@@ -64,36 +99,39 @@ var getHousePrice = data.house.price;
 
 // ------------------------slide3 Date picker starts------------------------
 function datePicker (){
-
+console.log('A');
   var getAccomodationSelect = document.getElementById('accomodationSelect').value;
 
   $(function() {
     $('#date').daterangepicker({
-        "minDate": newDate,
-        "maxDate": theDate,
+        'minDate': today,
+        'maxDate': theDate,
         opens: 'left'
     }, function(start, end, label) {
     });
   });
 
-  var dateObj = new Date();
-  var month = dateObj.getUTCMonth() + 1; //months from 1-12
-  var day = dateObj.getUTCDate();
-  var year = dateObj.getUTCFullYear();
   var theDate = new Date();
-  var newDate = month + "/" + day + "/" + year;
-  console.log(newDate);
-  var theNextDate = new Date(newDate);
-
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+  today = mm + '/' + dd + '/' + yyyy;
+  console.log(today);
+  var theNextDate = new Date(today);
   console.log(getAccomodationSelect);
 
   if (getAccomodationSelect === 'Hotel'){
+    console.log(getAccomodationSelect);
     theDate.setDate(theNextDate.getDate()+data.hotel.nightMax);
   } else if (getAccomodationSelect === 'Hostel'){
+    console.log(getAccomodationSelect);
     theDate.setDate(theNextDate.getDate()+data.hostel.nightMax);
   } else if (getAccomodationSelect === 'Motel'){
+    console.log(getAccomodationSelect);
     theDate.setDate(theNextDate.getDate()+data.motel.nightMax);
   } else if (getAccomodationSelect === 'House'){
+    console.log(getAccomodationSelect);
     theDate.setDate(theNextDate.getDate()+data.house.nightMax);
   }
 }

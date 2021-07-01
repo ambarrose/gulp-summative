@@ -48,6 +48,14 @@ h5 {
   text-transform: uppercase;
  }
 
+ label {
+   font-family: 'Anton', sans-serif;
+   font-size: 30px;
+   color: $coral;
+   text-align: center;
+   text-transform: uppercase;
+  }
+
 li {
   color: $white;
   margin-left: 20px;
@@ -90,6 +98,9 @@ ul.no-bullets {
 #submitFoodCard2:hover,
 #confirm:hover,
 #confirmCard1:hover,
+#confirmCard2:hover,
+#confirmCard3:hover,
+#confirmCard4:hover,
 #confirmCardNo:hover {
   background-color: $fadeblack;
   color: $coral;
@@ -552,11 +563,30 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   background-color: $coral;
  }
 
+#confirmCard1 {
+ width: 100px;
+ margin-left: 300px;
+ background-color: $coral;
+}
+
 #confirmCard2 {
   width: 100px;
   margin-left: 300px;
   background-color: $coral;
  }
+
+#confirmCard3 {
+  width: 100px;
+  margin-left: 300px;
+  background-color: $coral;
+ }
+
+#confirmCard4 {
+  width: 100px;
+  margin-left: 300px;
+  background-color: $coral;
+ }
+
 
 #back5 {
   width: 100px;
@@ -712,7 +742,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   margin-top: 10px;
  }
 
-#confirmCard1 {
+#confirmCardA,
+#confirmCardB,
+#confirmCardC,
+#confirmCardD {
   position: absolute;
   display: flex;
   margin-top: 90px;
@@ -722,7 +755,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   background-color: $coral;
  }
 
-#confirmCardNo {
+#confirmCardNoA,
+#confirmCardNoB,
+#confirmCardNoC,
+#confirmCardNoD   {
   float: right;
   margin-top: 90px;
   width: 100px;
@@ -746,10 +782,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   padding-top: 20px;
  }
 
-#confirm {
+#finalConfirm {
   position: absolute;
   width: 100px;
-  margin-left: 1080px;
+  margin-left: 1070px;
   margin-top: 10px;
   background-color: $coral;
  }

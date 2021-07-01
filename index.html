@@ -26,8 +26,8 @@
   </div>
   <!-- menu section ends -->
 
+  <!-- slider section starts -->
   <div id="fullpage">
-<!-- make a slider section class or ID separat from general section to move buttons -->
   	<div class="section" id="slideSection">
 
       <div class="slide" id="scrn1" data-anchor="slide1">
@@ -38,15 +38,13 @@
         <div id="hash">
           <h1>#DoSomethingNewNZ</h1>
         </div>
-
-
       </div>
     <!-- slide 1 ends -->
 
       <div class="slide" id="scrn2" data-anchor="slide2">
         <div class="slide-2 order-Form">
             <div class="group sel">
-              <label for="location"><h4>Location</h4></label>
+              <h4>Location</h4>
           		<select id="locationSelect" class="form-control">
                 <option>Select location </option>
           		  <option>Rotorua </option>
@@ -57,7 +55,7 @@
           		</select>
             </div>
             <div class="group sel">
-              <label for="accomodation"><h4>Accomodation type</h4></label>
+              <h4>Accomodation type</h4>
           		<select id="accomodationSelect" class="form-control">
                 <option>Select accomodation type</option>
           		  <option>Hotel</option>
@@ -86,7 +84,7 @@
       <div class="slide" id="scrn4"  data-anchor="slide4">
         <div class="slide-4">
         <h4>Select amount of guests</h4>
-        <input id="amount" type="number" min="1" max="" value="1" />
+        <input id="amount" type="number" min="1" max="15" value="1" />
           <button type="submit" id="back4" class="back btn btn-default">Go Back</button>
           <button type="submit" id="submitGuest" class="btn btn-default">Next</button>
           </div>
@@ -135,7 +133,7 @@
             <div id="hotelExpand" style="width: 25rem;">
               <img src="img/q-u-i-giL2fHNr3Lc-unsplash.jpg" class="card-img-top" alt="...">
               <p class="price">Pricing Per night $157</p>
-              <button id="confirmCard2"  type="button" name="button" class="btn btn-default">Confirm</button>
+              <button id="confirmCard1"  type="button" name="button" class="btn btn-default">Confirm</button>
             </div>
             <div id="hostelExpand" style="width: 25rem;">
               <img src="img/marcus-loke-WQJvWU_HZFo-unsplash.jpg" class="card-img-top" alt="...">
@@ -145,12 +143,12 @@
             <div id="motelExpand" style="width: 25rem;">
               <img src="img/randy-laybourne-pTWwoaoB9e0-unsplash.jpg" class="card-img-top" alt="...">
               <p class="price">Pricing Per night $90</p>
-              <button id="confirmCard2"  type="button" name="button" class="btn btn-default">Confirm</button>
+              <button id="confirmCard3"  type="button" name="button" class="btn btn-default">Confirm</button>
             </div>
             <div id="houseExpand" style="width: 25rem;">
               <img src="img/chesley-mccarty-IP8_8izFE4k-unsplash.jpg" class="card-img-top" alt="...">
               <p class="price">Pricing Per night $240</p>
-              <button id="confirmCard2"  type="button" name="button" class="btn btn-default">Confirm</button>
+              <button id="confirmCard4"  type="button" name="button" class="btn btn-default">Confirm</button>
             </div>
             <div id="cardHotelExpand">
               <h2 class="card-title">Hotel</h2>
@@ -173,8 +171,8 @@
 
           <button type="submit" id="back5" class="back btn btn-default">Go Back</button>
           <button type="submit" id="backExpand" class="btn btn-default">Go Back</button>
-
         </div>
+        <!-- slide 5 ends -->
 
        <div class="slide" id="scrn6"  data-anchor="slide6">
          <div class="slide-6 food-card">
@@ -186,10 +184,10 @@
                <p class="card-text">This dégustation involves sampling small portions of all of our chef's signature dishes. It consists of many courses and is accompanied by matching wines that complement each dish.</p>
                <h2>Select amount of meals</h2>
 
-               <input class"food-spinner" id="meals" type="number" min="1" max="100" value="1" />
+               <input class="food-spinner" id="meals" type="number" min="0" max="100" value="1" />
 
-               <button id="confirmCard1"  type="button" name="button" class="btn btn-default">Confirm</button>
-               <button id="confirmCardNo"  type="button" name="button" class="btn btn-default">No thanks</button>
+               <button id="confirmCardA"  type="button" name="button" class="btn btn-default">Confirm</button>
+               <button id="confirmCardNoA"  type="button" name="button" class="btn btn-default">No thanks</button>
              </div>
            </div>
            <div id="hostelFood" style="width: 18rem;">
@@ -197,8 +195,8 @@
              <div class="card-body">
                <h2 class="card-title">2 for 1 burgers and fries</h2>
                <p class="card-text">Served on a brioche bun. GF buns are availablne on request. Menu will be available on arrival. </p>
-               <button id="confirmCard1"  type="button" name="button" class="btn btn-default">Confirm</button>
-               <button id="confirmCardNo"  type="button" name="button" class="btn btn-default">No thanks</button>
+               <button id="confirmCardB"  type="button" name="button" class="btn btn-default">Confirm</button>
+               <button id="confirmCardNoB"  type="button" name="button" class="btn btn-default">No thanks</button>
              </div>
            </div>
            <div id="motelFood" style="width: 18rem;">
@@ -206,8 +204,8 @@
              <div class="card-body">
                <h2 class="card-title">Buffet Breakfast</h2>
                <p class="card-text">Select foods from wide choice of hot and cold dishes, including cold cuts, cheese, sweets, and fruit, is made available. You can eat as much as you like without limits. </p>
-               <button id="confirmCard1"  type="button" name="button" class="btn btn-default">Confirm</button>
-               <button id="confirmCardNo"  type="button" name="button" class="btn btn-default">No thanks</button>
+               <button id="confirmCardC"  type="button" name="button" class="btn btn-default">Confirm</button>
+               <button id="confirmCardNoC"  type="button" name="button" class="btn btn-default">No thanks</button>
              </div>
            </div>
            <div id="houseFood" style="width: 18rem;">
@@ -215,14 +213,14 @@
              <div class="card-body">
                <h2 class="card-title">Dessert Sharing Platter</h2>
                <p class="card-text">Nothing could be easier for dessert than this selection of store-bought sweets. Serve on a board with fresh fruit and homemade Baileys and brownie dips for extra wow factor.</p>
-               <button id="confirmCard1"  type="button" name="button" class="btn btn-default">Confirm</button>
-               <button id="confirmCardNo"  type="button" name="button" class="btn btn-default">No thanks</button>
+               <button id="confirmCardD"  type="button" name="button" class="btn btn-default">Confirm</button>
+               <button id="confirmCardNoD"  type="button" name="button" class="btn btn-default">No thanks</button>
              </div>
            </div>
-        </div>
-
+         </div>
          <button type="submit" id="back6" class="back btn btn-default">Go Back</button>
-        </div>
+      </div>
+      <!-- slide 6 ends -->
 
         <div class="slide" id="scrn7"  data-anchor="slide7">
           <div class="slide-7 confirmation-panel">
@@ -239,30 +237,30 @@
              <li>Number of meals: <span id="foodDetails"></span>
              </li>
            </ul>
-           <div class="total">
+         <div class="total">
            <h3>Total: $<span id="amountTotal"></span></h3></div>
-         </div>
-         <button type="submit" id="back7" class="back btn btn-default">Go Back</button>
-          <button type="confirm" id="confirm" class="btn btn-default">Confirm</button>
-          </div>
+        </div>
+          <button type="submit" id="back7" class="back btn btn-default">Go Back</button>
+          <button id="finalConfirm" class="btn btn-default">Confirm</button>
+       </div>
+       <!-- slide 7 ends -->
 
          <div class="slide" id="scrn8"  data-anchor="slide8">
            <div class="slide-8">
              <h1>Thank you for placing your booking with tourism NZ! </h1>
          	</div>
         </div>
+        <!-- slide 8 ends -->
       </div>
-
-    </div>
     <!-- Section ENDS -->
-  </div>
-  <!-- fullpage ends -->
+    </div>
+    <!-- fullpage ends -->
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
   <script src="anime.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
   <script src="src/jquery.fullpage.js"></script>
   <script src="js/data.js"></script>
   <script src="js/custom.js"></script>
